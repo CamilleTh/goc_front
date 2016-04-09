@@ -1,14 +1,28 @@
-<ion-content>
+<ion-content class="container_cstm">
 
     <style>
 
+        .container_cstm{
+            background-color: #4d4d4d;
+        }
+
         .h2-bottom-left {
 
-            bottom: 15px;
-            left: 20%;
+            bottom: 30px;
+            left: 30px;
             position: absolute;
             text-align: center;
         }
+
+        .h2-top-left {
+
+            top: 30px;
+            left: 30px;
+            position: absolute;
+            text-align: center;
+        }
+
+
 
         .h2-bottom-right {
 
@@ -18,18 +32,50 @@
             text-align: center;
         }
 
+        .h2-top-right {
+
+            top: 30px;
+            right: 30px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .i-bottom-left {
+            bottom: 60px;
+            left: 30px;
+            position: absolute;
+            text-align: center;font-size: 3em;color:white;
+        }
+
+        .i-top-left {
+            top: 60px;
+            left: 30px;
+            position: absolute;
+            text-align: center;
+            font-size: 3em;color:white;
+        }
+
         .i-bottom-right {
             bottom: 60px;
             right: 30px;
             position: absolute;
             text-align: center;
+            font-size: 3em;color:white;
+        }
+
+        .i-top-right {
+            top: 60px;
+            right: 30px;
+            position: absolute;
+            text-align: center;
+            font-size: 3em;color:white;
         }
         
 
 
         .no-padding {
             padding: 0;
-
+            margin-right: 0;
         }
 
         .tile-width {
@@ -39,9 +85,6 @@
 
         }
 
-        .tile-one {
-            width: 47%;
-        }
     </style>
 
     <script>
@@ -53,15 +96,27 @@
 
     <div class="tiles" style="width: 100%">
         <div class="tilerow" style="width: 100%">
-            <div [class]="meteo"><i class="fa fa-cloud" style="font-size: 3em;color:white;"></i>
-                <h2>Weather</h2></div>
-            <div [class]="transport"><i class="fa fa-road" style="font-size: 3em;color:white;"></i>
-                <h2 class="h2-bottom-left">Transports</h2></div>
 
-            <div [class]="securite"><i class="fa fa-shield " style="font-size: 3em;color:white;"></i>
-                <h2 >Security</h2></div>
-            <div [class]="sante"><i class="fa fa-heartbeat i-bottom-right" style="font-size: 3em;color:white;"></i>
-                <h2 class="h2-bottom-right">Health</h2></div>
+
+            <div [class]="meteo">
+                <i class="fa fa-cloud i-top-left" style=""></i>
+                <h2 class="h2-top-left">Weather</h2>
+            </div>
+
+            <div [class]="transport">
+                <i class="fa fa-road i-top-right" style="font-size: 3em;color:white;"></i>
+                <h2 class="h2-top-right">Transports</h2>
+            </div>
+
+            <div [class]="securite">
+                <i class="fa fa-shield i-bottom-left" style="font-size: 3em;color:white;"></i>
+                <h2 class="h2-bottom-left">Security</h2>
+            </div>
+
+            <div [class]="sante">
+                <i class="fa fa-heartbeat i-bottom-right" style="font-size: 3em;color:white;"></i>
+                <h2 class="h2-bottom-right">Health</h2>
+            </div>
         </div>
 
     </div>
