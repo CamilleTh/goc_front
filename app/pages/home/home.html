@@ -1,41 +1,24 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
-@CamilleTh
-Watch 16
-Star 33
-Fork 47 driftyco/ionic-preview-app
-Code  Issues 3  Pull requests 1  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathionic-preview-app/app/pages/grid/basic/template.html
-b0414e8  on 8 Mar
-@brandyscarney brandyscarney refactor(routes): add RouteConfig with URLs
-1 contributor
-RawBlameHistory     67 lines (58 sloc)  1.2 KB
-
 <ion-navbar *navbar hideBackButton class="show-navbar">
-  <ion-title>Grid</ion-title>
+  <ion-title>{{Title}}</ion-title>
 </ion-navbar>
 
 <ion-content class="has-header grid-page">
 
   <ion-row >
     <ion-col width-50>
-      Weather
+      {{meteo}}
     </ion-col>
     <ion-col width-50>
-      Transport
+      {{transport}}
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col width-50>
-      Security
+      {{securite}}
     </ion-col>
     <ion-col width-50>
-      Health
+      {{sante}}
     </ion-col>
   </ion-row>
 </ion-content>
