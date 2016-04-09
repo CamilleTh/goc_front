@@ -32,7 +32,6 @@ var MyApp = (function () {
     return MyApp;
 }());
 exports.MyApp = MyApp;
-
 },{"./pages/home/home":2,"es6-shim":256,"ionic-angular":337,"ionic-native":359}],2:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,7 +56,6 @@ var HomePage = (function () {
     return HomePage;
 }());
 exports.HomePage = HomePage;
-
 },{"ionic-angular":337}],3:[function(require,module,exports){
 'use strict';function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
@@ -26950,7 +26948,7 @@ var EventEmitter = (function (_super) {
     return EventEmitter;
 })(Subject_1.Subject);
 exports.EventEmitter = EventEmitter;
-},{"angular2/src/facade/lang":189,"angular2/src/facade/promise":191,"rxjs/Observable":408,"rxjs/Subject":410,"rxjs/observable/PromiseObservable":413,"rxjs/operator/toPromise":414}],182:[function(require,module,exports){
+},{"angular2/src/facade/lang":189,"angular2/src/facade/promise":191,"rxjs/Observable":405,"rxjs/Subject":407,"rxjs/observable/PromiseObservable":410,"rxjs/operator/toPromise":411}],182:[function(require,module,exports){
 'use strict';var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -28450,7 +28448,7 @@ var JSONPBackend_ = (function (_super) {
     return JSONPBackend_;
 })(JSONPBackend);
 exports.JSONPBackend_ = JSONPBackend_;
-},{"../base_response_options":197,"../enums":198,"../interfaces":202,"../static_response":204,"./browser_jsonp":192,"angular2/core":5,"angular2/src/facade/exceptions":186,"angular2/src/facade/lang":189,"rxjs/Observable":408}],195:[function(require,module,exports){
+},{"../base_response_options":197,"../enums":198,"../interfaces":202,"../static_response":204,"./browser_jsonp":192,"angular2/core":5,"angular2/src/facade/exceptions":186,"angular2/src/facade/lang":189,"rxjs/Observable":405}],195:[function(require,module,exports){
 'use strict';var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28578,7 +28576,7 @@ var XHRBackend = (function () {
     return XHRBackend;
 })();
 exports.XHRBackend = XHRBackend;
-},{"../base_response_options":197,"../enums":198,"../headers":199,"../http_utils":201,"../static_response":204,"./browser_xhr":193,"angular2/core":5,"angular2/src/facade/lang":189,"rxjs/Observable":408}],196:[function(require,module,exports){
+},{"../base_response_options":197,"../enums":198,"../headers":199,"../http_utils":201,"../static_response":204,"./browser_xhr":193,"angular2/core":5,"angular2/src/facade/lang":189,"rxjs/Observable":405}],196:[function(require,module,exports){
 'use strict';var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -38555,7 +38553,7 @@ exports.Codegen = Codegen;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"_process":407}],257:[function(require,module,exports){
+},{"_process":404}],257:[function(require,module,exports){
 "use strict";
 var dom_1 = require('../util/dom');
 var util_1 = require('../util/util');
@@ -64741,11 +64739,14 @@ var devicemotion_1 = require('./plugins/devicemotion');
 exports.DeviceMotion = devicemotion_1.DeviceMotion;
 var deviceorientation_1 = require('./plugins/deviceorientation');
 exports.DeviceOrientation = deviceorientation_1.DeviceOrientation;
+var diagnostic_1 = require('./plugins/diagnostic');
+exports.Diagnostic = diagnostic_1.Diagnostic;
 var dialogs_1 = require('./plugins/dialogs');
 exports.Dialogs = dialogs_1.Dialogs;
 var facebook_1 = require('./plugins/facebook');
 exports.Facebook = facebook_1.Facebook;
-//import {File} from './plugins/file';
+var file_1 = require('./plugins/file');
+exports.File = file_1.File;
 var flashlight_1 = require('./plugins/flashlight');
 exports.Flashlight = flashlight_1.Flashlight;
 var geolocation_1 = require('./plugins/geolocation');
@@ -64756,16 +64757,25 @@ var hotspot_1 = require('./plugins/hotspot');
 exports.Hotspot = hotspot_1.Hotspot;
 var imagepicker_1 = require('./plugins/imagepicker');
 exports.ImagePicker = imagepicker_1.ImagePicker;
+var inappbrowser_1 = require('./plugins/inappbrowser');
+exports.InAppBrowser = inappbrowser_1.InAppBrowser;
 var keyboard_1 = require('./plugins/keyboard');
 exports.Keyboard = keyboard_1.Keyboard;
 var launchnavigator_1 = require('./plugins/launchnavigator');
 exports.LaunchNavigator = launchnavigator_1.LaunchNavigator;
 var localnotifications_1 = require('./plugins/localnotifications');
 exports.LocalNotifications = localnotifications_1.LocalNotifications;
+var network_1 = require('./plugins/network');
+exports.Network = network_1.Network;
+exports.Connection = network_1.Connection;
 var push_1 = require('./plugins/push');
 exports.Push = push_1.Push;
 var sms_1 = require('./plugins/sms');
 exports.SMS = sms_1.SMS;
+var socialsharing_1 = require('./plugins/socialsharing');
+exports.SocialSharing = socialsharing_1.SocialSharing;
+var spinnerdialog_1 = require('./plugins/spinnerdialog');
+exports.SpinnerDialog = spinnerdialog_1.SpinnerDialog;
 var splashscreen_1 = require('./plugins/splashscreen');
 exports.Splashscreen = splashscreen_1.Splashscreen;
 var statusbar_1 = require('./plugins/statusbar');
@@ -64791,6 +64801,7 @@ window['IonicNative'] = {
     Calendar: calendar_1.Calendar,
     Camera: camera_1.Camera,
     Clipboard: clipboard_1.Clipboard,
+    Connection: network_1.Connection,
     Contacts: contacts_1.Contacts,
     DatePicker: datepicker_1.DatePicker,
     DBMeter: dbmeter_1.DBMeter,
@@ -64798,18 +64809,23 @@ window['IonicNative'] = {
     DeviceMotion: devicemotion_1.DeviceMotion,
     DeviceOrientation: deviceorientation_1.DeviceOrientation,
     Dialogs: dialogs_1.Dialogs,
+    Diagnostic: diagnostic_1.Diagnostic,
     Facebook: facebook_1.Facebook,
-    //File: File,
+    File: file_1.File,
     Flashlight: flashlight_1.Flashlight,
     Geolocation: geolocation_1.Geolocation,
     Globalization: globalization_1.Globalization,
     Hotspot: hotspot_1.Hotspot,
     ImagePicker: imagepicker_1.ImagePicker,
+    InAppBrowser: inappbrowser_1.InAppBrowser,
     Keyboard: keyboard_1.Keyboard,
     LaunchNavigator: launchnavigator_1.LaunchNavigator,
     LocalNotifications: localnotifications_1.LocalNotifications,
+    Network: network_1.Network,
     Push: push_1.Push,
     SMS: sms_1.SMS,
+    SocialSharing: socialsharing_1.SocialSharing,
+    SpinnerDialog: spinnerdialog_1.SpinnerDialog,
     Splashscreen: splashscreen_1.Splashscreen,
     StatusBar: statusbar_1.StatusBar,
     Toast: toast_1.Toast,
@@ -64832,7 +64848,7 @@ setTimeout(function () {
     }
 }, DEVICE_READY_TIMEOUT);
 
-},{"./ng1":360,"./plugins/actionsheet":361,"./plugins/appavailability":362,"./plugins/apprate":363,"./plugins/appversion":364,"./plugins/badge":365,"./plugins/barcodescanner":366,"./plugins/base64togallery":367,"./plugins/batterystatus":368,"./plugins/ble":369,"./plugins/calendar":370,"./plugins/camera":371,"./plugins/clipboard":372,"./plugins/contacts":373,"./plugins/datepicker":374,"./plugins/dbmeter":375,"./plugins/device":376,"./plugins/devicemotion":377,"./plugins/deviceorientation":378,"./plugins/dialogs":379,"./plugins/facebook":380,"./plugins/flashlight":381,"./plugins/geolocation":382,"./plugins/globalization":383,"./plugins/hotspot":384,"./plugins/imagepicker":385,"./plugins/keyboard":386,"./plugins/launchnavigator":387,"./plugins/localnotifications":388,"./plugins/plugin":389,"./plugins/push":390,"./plugins/sms":391,"./plugins/splashscreen":392,"./plugins/statusbar":393,"./plugins/toast":394,"./plugins/touchid":395,"./plugins/vibration":396}],360:[function(require,module,exports){
+},{"./ng1":360,"./plugins/actionsheet":361,"./plugins/appavailability":362,"./plugins/apprate":363,"./plugins/appversion":364,"./plugins/badge":365,"./plugins/barcodescanner":366,"./plugins/base64togallery":367,"./plugins/batterystatus":368,"./plugins/ble":369,"./plugins/calendar":370,"./plugins/camera":371,"./plugins/clipboard":372,"./plugins/contacts":373,"./plugins/datepicker":374,"./plugins/dbmeter":375,"./plugins/device":376,"./plugins/devicemotion":377,"./plugins/deviceorientation":378,"./plugins/diagnostic":379,"./plugins/dialogs":380,"./plugins/facebook":381,"./plugins/file":382,"./plugins/flashlight":383,"./plugins/geolocation":384,"./plugins/globalization":385,"./plugins/hotspot":386,"./plugins/imagepicker":387,"./plugins/inappbrowser":388,"./plugins/keyboard":389,"./plugins/launchnavigator":390,"./plugins/localnotifications":391,"./plugins/network":392,"./plugins/plugin":393,"./plugins/push":394,"./plugins/sms":395,"./plugins/socialsharing":396,"./plugins/spinnerdialog":397,"./plugins/splashscreen":398,"./plugins/statusbar":399,"./plugins/toast":400,"./plugins/touchid":401,"./plugins/vibration":402}],360:[function(require,module,exports){
 /**
  * Initialize the ngCordova Angular module if we're running in ng1
  */
@@ -64932,7 +64948,7 @@ var ActionSheet = (function () {
 })();
 exports.ActionSheet = ActionSheet;
 
-},{"./plugin":389}],362:[function(require,module,exports){
+},{"./plugin":393}],362:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64949,6 +64965,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {AppAvailability} from 'ionic-native';
+ *
+ *
  * var app;
  *
  * if(device.platform === 'iOS') {
@@ -64988,7 +65007,7 @@ var AppAvailability = (function () {
 })();
 exports.AppAvailability = AppAvailability;
 
-},{"./plugin":389}],363:[function(require,module,exports){
+},{"./plugin":393}],363:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65005,6 +65024,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {AppRate} from 'ionic-native';
+ *
+ *
  * AppRate.preferences.storeAppURL.ios = '<my_app_id>';
  * AppRate.preferences.storeAppURL.android = 'market://details?id=<package_name>';
  * AppRate.preferences.storeAppURL.blackberry = 'appworld://content/[App Id]/';
@@ -65063,7 +65085,7 @@ var AppRate = (function () {
 })();
 exports.AppRate = AppRate;
 
-},{"./plugin":389}],364:[function(require,module,exports){
+},{"./plugin":393}],364:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65080,6 +65102,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {AppVersion} from 'ionic-native';
+ *
+ *
  *  AppVersion.getAppName();
  *  AppVersion.getPackageName();
  *  AppVersion.getVersionCode();
@@ -65133,7 +65158,7 @@ var AppVersion = (function () {
 })();
 exports.AppVersion = AppVersion;
 
-},{"./plugin":389}],365:[function(require,module,exports){
+},{"./plugin":393}],365:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65150,6 +65175,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {Badge} from 'ionic-native';
+ *
+ *
  * Badge.set(10);
  * Badge.increase();
  * Badge.clear();
@@ -65227,7 +65255,7 @@ var Badge = (function () {
 })();
 exports.Badge = Badge;
 
-},{"./plugin":389}],366:[function(require,module,exports){
+},{"./plugin":393}],366:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65244,6 +65272,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {BarcodeScanner} from 'ionic-native';
+ *
+ *
  * BarcodeScanner.scan().then((barcodeData) => {
  *  // Success! Barcode data is here
  * }, (err) => {
@@ -65267,14 +65298,14 @@ var BarcodeScanner = (function () {
             plugin: 'phonegap-plugin-barcodescanner',
             pluginRef: 'cordova.plugins.barcodeScanner',
             repo: 'https://github.com/phonegap/phonegap-plugin-barcodescanner',
-            pltaforms: ['Android', 'iOS', 'Windows Phone 8', 'Windows 10', 'Windows 8', 'BlackBerry 10', 'Browser']
+            platforms: ['Android', 'iOS', 'Windows Phone 8', 'Windows 10', 'Windows 8', 'BlackBerry 10', 'Browser']
         })
     ], BarcodeScanner);
     return BarcodeScanner;
 })();
 exports.BarcodeScanner = BarcodeScanner;
 
-},{"./plugin":389}],367:[function(require,module,exports){
+},{"./plugin":393}],367:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65285,9 +65316,11 @@ var plugin_1 = require('./plugin');
 /**
  * @name Base64 To Gallery
  * @description This plugin allows you to save base64 data as a png image into the device
- * @platforms Android, iOS, Windows Phone
  * @usage
  * ```ts
+ * import {Base64ToGallery} from 'ionic-native';
+ *
+ *
  * Base64ToGallery.base64ToGallery(base64Data, 'img_').then(
  *   res => console.log("Saved image to gallery ", res),
  *   err => console.log("Error saving image to gallery ", err)
@@ -65298,7 +65331,7 @@ var Base64ToGallery = (function () {
     function Base64ToGallery() {
     }
     /**
-     *
+     * Converts a base64 string to an image file in the device gallery
      * @param data
      * @param prefix
      */
@@ -65320,7 +65353,7 @@ var Base64ToGallery = (function () {
 })();
 exports.Base64ToGallery = Base64ToGallery;
 
-},{"./plugin":389}],368:[function(require,module,exports){
+},{"./plugin":393}],368:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65328,7 +65361,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var plugin_1 = require('./plugin');
-var Observable_1 = require("rxjs/Observable");
 /**
  * @name Battery Status
  * @description
@@ -65336,6 +65368,10 @@ var Observable_1 = require("rxjs/Observable");
  *
  * @usage
  * ```js
+ * import {BatteryStatus} from 'ionic-native';
+ *
+ *
+ *
  * // watch change in battery status
  * let subscription = BatteryStatus.onChange().subscribe(
  *  status => {
@@ -65355,23 +65391,35 @@ var BatteryStatus = (function () {
      * Watch the change in battery level
      * @returns {Observable} Returns an observable that pushes a status object
      */
-    BatteryStatus.onChange = function () {
-        return getEventObservable("batterylevel");
-    };
+    BatteryStatus.onChange = function () { return; };
     /**
      * Watch when the battery level goes low
      * @returns {Observable<StatusObject>} Returns an observable that pushes a status object
      */
-    BatteryStatus.onLow = function () {
-        return getEventObservable("batterylow");
-    };
+    BatteryStatus.onLow = function () { return; };
     /**
      * Watch when the battery level goes to critial
      * @returns {Observable<StatusObject>} Returns an observable that pushes a status object
      */
-    BatteryStatus.onCritical = function () {
-        return getEventObservable("batterycritical");
-    };
+    BatteryStatus.onCritical = function () { return; };
+    __decorate([
+        plugin_1.Cordova({
+            eventObservable: true,
+            event: 'batterylevel'
+        })
+    ], BatteryStatus, "onChange", null);
+    __decorate([
+        plugin_1.Cordova({
+            eventObservable: true,
+            event: 'batterylow'
+        })
+    ], BatteryStatus, "onLow", null);
+    __decorate([
+        plugin_1.Cordova({
+            eventObservable: true,
+            event: 'batterycritical'
+        })
+    ], BatteryStatus, "onCritical", null);
     BatteryStatus = __decorate([
         plugin_1.Plugin({
             plugin: 'cordova-plugin-batterystatus',
@@ -65382,20 +65430,8 @@ var BatteryStatus = (function () {
     return BatteryStatus;
 })();
 exports.BatteryStatus = BatteryStatus;
-/**
- * Wrap the event with an observable
- * @param event
- * @returns {Observable}
- */
-function getEventObservable(event) {
-    return new Observable_1.Observable(function (observer) {
-        var callback = function (status) { return observer.next(status); };
-        window.addEventListener(event, callback, false);
-        return function () { return window.removeEventListener(event, callback, false); };
-    });
-}
 
-},{"./plugin":389,"rxjs/Observable":398}],369:[function(require,module,exports){
+},{"./plugin":393}],369:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65818,7 +65854,7 @@ var BLE = (function () {
 })();
 exports.BLE = BLE;
 
-},{"./plugin":389}],370:[function(require,module,exports){
+},{"./plugin":393}],370:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65844,6 +65880,10 @@ var Calendar = (function () {
      *
      * @usage
      * ```
+     * import {Calendar} from 'ionic-native';
+     *
+     *
+     *
      * Calendar.createCalendar('MyCalendar').then(
      *   (msg) => { console.log(msg); },
      *   (err) => { console.log(err); }
@@ -66120,7 +66160,7 @@ var Calendar = (function () {
 })();
 exports.Calendar = Calendar;
 
-},{"./plugin":389}],371:[function(require,module,exports){
+},{"./plugin":393}],371:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66185,7 +66225,7 @@ var Camera = (function () {
 })();
 exports.Camera = Camera;
 
-},{"./plugin":389}],372:[function(require,module,exports){
+},{"./plugin":393}],372:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66203,6 +66243,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {Clipboard} from 'ionic-native';
+ *
+ *
+ *
  * Clipboard.copy("Hello world");
  *
  * Clipboard.paste().then(
@@ -66248,7 +66292,7 @@ var Clipboard = (function () {
 })();
 exports.Clipboard = Clipboard;
 
-},{"./plugin":389}],373:[function(require,module,exports){
+},{"./plugin":393}],373:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66267,6 +66311,10 @@ var plugin_1 = require('./plugin');
  * @usage
  *
  * ```js
+ * import {Contacts} from 'ionic-native';
+ *
+ *
+ *
  * Contacts.save({
  *   displayName: "Mr. Ionitron"
  * }).then((contact) => {}, (err) => {})
@@ -66336,7 +66384,7 @@ var Contacts = (function () {
 })();
 exports.Contacts = Contacts;
 
-},{"./plugin":389}],374:[function(require,module,exports){
+},{"./plugin":393}],374:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66355,6 +66403,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {DatePicker} from 'ionic-native';
+ *
+ *
+ *
  * DatePicker.show({
  *   date: new Date(),
  *   mode: 'date'
@@ -66388,7 +66440,7 @@ var DatePicker = (function () {
 })();
 exports.DatePicker = DatePicker;
 
-},{"./plugin":389}],375:[function(require,module,exports){
+},{"./plugin":393}],375:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66399,9 +66451,12 @@ var plugin_1 = require('./plugin');
 /**
  * @name DB Meter
  * @description This plugin defines a global DBMeter object, which permits to get the decibel values from the microphone.
- * @platforms Android, iOS
  * @usage
  * ```ts
+ * import {DBMeter} from 'ionic-native';
+ *
+ *
+ *
  * // Start listening
  * let subscription = DBMeter.start().subscribe(
  *   data => console.log(data)
@@ -66464,14 +66519,15 @@ var DBMeter = (function () {
         plugin_1.Plugin({
             plugin: 'cordova-plugin-dbmeter',
             pluginRef: 'DBMeter',
-            repo: 'https://github.com/akofman/cordova-plugin-dbmeter'
+            repo: 'https://github.com/akofman/cordova-plugin-dbmeter',
+            platforms: ['iOS', 'Android']
         })
     ], DBMeter);
     return DBMeter;
 })();
 exports.DBMeter = DBMeter;
 
-},{"./plugin":389}],376:[function(require,module,exports){
+},{"./plugin":393}],376:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66486,7 +66542,11 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
- * let info = Device.getDevice();
+ * import {Device} from 'ionic-native';
+ *
+ *
+ *
+ * console.log('Device UUID is: ' + Device.device.uuid);
  * ```
  */
 var Device = (function () {
@@ -66516,7 +66576,7 @@ var Device = (function () {
 })();
 exports.Device = Device;
 
-},{"./plugin":389}],377:[function(require,module,exports){
+},{"./plugin":393}],377:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66531,6 +66591,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```ts
+ * import {DeviceMotion} from 'ionic-native';
+ *
+ *
  *
  * // Get the device current acceleration
  * DeviceMotion.getCurrentAcceleration().then(
@@ -66594,7 +66657,7 @@ var DeviceMotion = (function () {
 })();
 exports.DeviceMotion = DeviceMotion;
 
-},{"./plugin":389}],378:[function(require,module,exports){
+},{"./plugin":393}],378:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66609,6 +66672,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```ts
+ * import {DeviceOrientation} from 'ionic-native';
+ *
+ *
+ *
  * // Get the device current compass heading
  * DeviceOrientation.getCurrentHeading().then(
  *   data => console.log(data),
@@ -66661,7 +66728,216 @@ var DeviceOrientation = (function () {
 })();
 exports.DeviceOrientation = DeviceOrientation;
 
-},{"./plugin":389}],379:[function(require,module,exports){
+},{"./plugin":393}],379:[function(require,module,exports){
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+var Diagnostic = (function () {
+    function Diagnostic() {
+    }
+    /**
+    * Checks if app is able to access device location.
+    */
+    Diagnostic.isLocationEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /**
+    * Checks if Wifi is connected/enabled. On iOS this returns true if the device is connected to a network by WiFi. On Android and Windows 10 Mobile this returns true if the WiFi setting is set to enabled.
+    * On Android this requires permission <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    */
+    Diagnostic.isWifiEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if the device has a camera. On Android this returns true if the device has a camera. On iOS this returns true if both the device has a camera AND the application is authorized to use it. On Windows 10 Mobile this returns true if both the device has a rear-facing camera AND the
+    * application is authorized to use it.
+    */
+    Diagnostic.isCameraEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if the device has Bluetooth capabilities and if so that Bluetooth is switched on (same on Android, iOS and Windows 10 Mobile)
+    * On Android this requires permission <uses-permission android:name="android.permission.BLUETOOTH" />
+    */
+    Diagnostic.isBluetoothEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Returns the location authorization status for the application.
+    * Note for Android: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will always return GRANTED status as permissions are already granted at installation time.
+    *
+    * mode - (iOS-only / optional) location authorization mode: "always" or "when_in_use". If not specified, defaults to "when_in_use".
+    */
+    Diagnostic.requestLocationAuthorization = function (mode) {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if the application is authorized to use location.
+    * Note for Android: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will always return GRANTED status as permissions are already granted at installation time.
+    */
+    Diagnostic.isLocationAuthorized = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if camera hardware is present on device.
+    */
+    Diagnostic.isCameraPresent = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if the application is authorized to use the camera.
+    * Note for Android: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will always return TRUE as permissions are already granted at installation time.
+    */
+    Diagnostic.isCameraAuthorized = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if location mode is set to return high-accuracy locations from GPS hardware.
+    *   Returns true if Location mode is enabled and is set to either:
+    *   - Device only = GPS hardware only (high accuracy)
+    *   - High accuracy = GPS hardware, network triangulation and Wifi network IDs (high and low accuracy)
+    */
+    Diagnostic.isGpsLocationEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /*
+    * Checks if location mode is set to return low-accuracy locations from network triangulation/WiFi access points.
+    * Returns true if Location mode is enabled and is set to either:
+    *   - Battery saving = network triangulation and Wifi network IDs (low accuracy)
+    *   - High accuracy = GPS hardware, network triangulation and Wifi network IDs (high and low accuracy)
+    */
+    Diagnostic.isNetworkLocationEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /**
+    *
+    * Checks if remote (push) notifications are enabled.
+    * On iOS 8+, returns true if app is registered for remote notifications AND "Allow Notifications" switch is ON AND alert style is not set to "None" (i.e. "Banners" or "Alerts").
+    * On iOS <=7, returns true if app is registered for remote notifications AND alert style is not set to "None" (i.e. "Banners" or "Alerts") - same as isRegisteredForRemoteNotifications().
+    */
+    Diagnostic.isRemoteNotificationsEnabled = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    /**
+    *
+    * Indicates if the app is registered for remote (push) notifications on the device.
+    * On iOS 8+, returns true if the app is registered for remote notifications and received its device token, or false if registration has not occurred, has failed, or has been denied by the user. Note that user preferences for notifications in the Settings app will not affect this.
+    * On iOS <=7, returns true if app is registered for remote notifications AND alert style is not set to "None" (i.e. "Banners" or "Alerts") - same as isRemoteNotificationsEnabled().
+    */
+    Diagnostic.isRegisteredForRemoteNotifications = function () {
+        // This Promise is replaced by one from the @Cordova decorator that wraps
+        // the plugin's callbacks. We provide a dummy one here so TypeScript
+        // knows that the correct return type is Promise, because there's no way
+        // for it to know the return type from a decorator.
+        // See https://github.com/Microsoft/TypeScript/issues/4881
+        return new Promise(function (res, rej) { });
+    };
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isLocationEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isWifiEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isCameraEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isBluetoothEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "requestLocationAuthorization", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isLocationAuthorized", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isCameraPresent", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isCameraAuthorized", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isGpsLocationEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isNetworkLocationEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isRemoteNotificationsEnabled", null);
+    __decorate([
+        plugin_1.Cordova()
+    ], Diagnostic, "isRegisteredForRemoteNotifications", null);
+    Diagnostic = __decorate([
+        plugin_1.Plugin({
+            plugin: 'cordova.plugins.diagnostic',
+            pluginRef: 'cordova.plugins.diagnostic'
+        })
+    ], Diagnostic);
+    return Diagnostic;
+})();
+exports.Diagnostic = Diagnostic;
+
+},{"./plugin":393}],380:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66678,6 +66954,11 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {Dialogs} from 'ionic-native';
+ *
+ *
+ *
+ *
  * ```
  */
 var Dialogs = (function () {
@@ -66760,7 +67041,7 @@ var Dialogs = (function () {
 })();
 exports.Dialogs = Dialogs;
 
-},{"./plugin":389}],380:[function(require,module,exports){
+},{"./plugin":393}],381:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66835,6 +67116,14 @@ var plugin_1 = require('./plugin');
  * Events are listed on the [insights page](https://www.facebook.com/insights/).
  *
  * For tracking events, see `logEvent` and `logPurchase`.
+ *
+ * @usage
+ * ```js
+ * import {Facebook} from 'ionic-native';
+ *
+ *
+ *
+ * ```
  *
  */
 var Facebook = (function () {
@@ -67001,14 +67290,537 @@ var Facebook = (function () {
         plugin_1.Plugin({
             plugin: 'cordova-plugin-facebook4',
             pluginRef: 'facebookConnectPlugin',
-            repo: 'https://github.com/jeduan/cordova-plugin-facebook4'
+            repo: 'https://github.com/jeduan/cordova-plugin-facebook4',
+            install: 'cordova plugin add cordova-plugin-facebook4 --variable APP_ID="123456789" --variable APP_NAME="myApplication"'
         })
     ], Facebook);
     return Facebook;
 })();
 exports.Facebook = Facebook;
 
-},{"./plugin":389}],381:[function(require,module,exports){
+},{"./plugin":393}],382:[function(require,module,exports){
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+/**
+ * @name File
+ * @description
+ * This plugin implements a File API allowing read/write access to files residing on the device.
+ *
+ *  This plugin is based on several specs, including : The HTML5 File API http://www.w3.org/TR/FileAPI/
+ *  The (now-defunct) Directories and System extensions Latest: http://www.w3.org/TR/2012/WD-file-system-api-20120417/
+ *  Although most of the plugin code was written when an earlier spec was current: http://www.w3.org/TR/2011/WD-file-system-api-20110419/
+ *  It also implements the FileWriter spec : http://dev.w3.org/2009/dap/file-system/file-writer.html
+ */
+var File = (function () {
+    function File() {
+    }
+    // @Cordova()
+    // static getFreeDiskSpace(): Promise<any> { return }
+    /**
+     * Check if a directory exists in a certain path, directory.
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} dir Name of directory to check
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.checkDir = function (path, dir) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(dir))) {
+            rejectFn('directory cannot start with \/');
+        }
+        try {
+            var directory = path + dir;
+            window.resolveLocalFileSystemURL(directory, function (fileSystem) {
+                if (fileSystem.isDirectory === true) {
+                    resolveFn(fileSystem);
+                }
+                else {
+                    rejectFn({ code: 13, message: 'input is not a directory' });
+                }
+            }, function (error) {
+                error.message = File.cordovaFileError[error.code];
+                rejectFn(error);
+            });
+        }
+        catch (err) {
+            err.message = File.cordovaFileError[err.code];
+            rejectFn(err);
+        }
+        return promise;
+    };
+    /**
+     * Creates a new directory in the specific path.
+     * The replace boolean value determines whether to replace an existing directory with the same name.
+     * If an existing directory exists and the replace value is false, the promise will fail and return an error.
+     *
+     * @param {string} path  Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} dirName Name of directory to create
+     * @param {boolean} replace If true, replaces file with same name. If false returns error
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.createDir = function (path, dirName, replace) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(dirName))) {
+            rejectFn('directory cannot start with \/');
+        }
+        replace = replace ? false : true;
+        var options = {
+            create: true,
+            exclusive: replace
+        };
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getDirectory(dirName, options, function (result) {
+                    resolveFn(result);
+                }, function (error) {
+                    error.message = File.cordovaFileError[error.code];
+                    rejectFn(error);
+                });
+            }, function (err) {
+                err.message = File.cordovaFileError[err.code];
+                rejectFn(err);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Remove a directory at a given path
+     *
+     * @param {string} path The path to the directory
+     * @param {string} dirName The directory name
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.removeDir = function (path, dirName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(dirName))) {
+            rejectFn('directory cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getDirectory(dirName, { create: false }, function (dirEntry) {
+                    dirEntry.remove(function () {
+                        resolveFn({ success: true, fileRemoved: dirEntry });
+                    }, function (error) {
+                        error.message = File.cordovaFileError[error.code];
+                        rejectFn(error);
+                    });
+                }, function (err) {
+                    err.message = File.cordovaFileError[err.code];
+                    rejectFn(err);
+                });
+            }, function (er) {
+                er.message = File.cordovaFileError[er.code];
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Move a directory to a given path
+     *
+     * @param {string} path The source path to the directory
+     * @param {string} dirName The source directory name
+     * @param {string} newPath The destionation path to the directory
+     * @param {string} newDirName The destination directory name
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.moveDir = function (path, dirName, newPath, newDirName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        newDirName = newDirName || dirName;
+        if ((/^\//.test(newDirName))) {
+            rejectFn('directory cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getDirectory(dirName, { create: false }, function (dirEntry) {
+                    window.resolveLocalFileSystemURL(newPath, function (newDirEntry) {
+                        dirEntry.moveTo(newDirEntry, newDirName, function (result) {
+                            resolveFn(result);
+                        }, function (error) {
+                            rejectFn(error);
+                        });
+                    }, function (erro) {
+                        rejectFn(erro);
+                    });
+                }, function (err) {
+                    rejectFn(err);
+                });
+            }, function (er) {
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Copy a directory in various methods. If destination directory exists, will fail to copy.
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} dirName Name of directory to copy
+     * @param {string} newPath Base FileSystem of new location
+     * @param {string} newDirName New name of directory to copy to (leave blank to remain the same)
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.copyDir = function (path, dirName, newPath, newDirName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        newDirName = newDirName || dirName;
+        if ((/^\//.test(newDirName))) {
+            rejectFn('directory cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getDirectory(dirName, { create: false, exclusive: false }, function (dirEntry) {
+                    window.resolveLocalFileSystemURL(newPath, function (newDirEntry) {
+                        dirEntry.copyTo(newDirEntry, newDirName, function (result) {
+                            resolveFn(result);
+                        }, function (error) {
+                            error.message = File.cordovaFileError[error.code];
+                            rejectFn(error);
+                        });
+                    }, function (erro) {
+                        erro.message = File.cordovaFileError[erro.code];
+                        rejectFn(erro);
+                    });
+                }, function (err) {
+                    err.message = File.cordovaFileError[err.code];
+                    rejectFn(err);
+                });
+            }, function (er) {
+                er.message = File.cordovaFileError[er.code];
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * List files and directory from a given path
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} dirName Name of directory
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.listDir = function (path, dirName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(dirName))) {
+            rejectFn('directory cannot start with \/');
+        }
+        var options = {
+            create: false,
+            exclusive: false
+        };
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getDirectory(dirName, options, function (parent) {
+                    var reader = parent.createReader();
+                    reader.readEntries(function (entries) {
+                        resolveFn(entries);
+                    }, function () {
+                        rejectFn('DIR_READ_ERROR : ' + path + dirName);
+                    });
+                }, function (error) {
+                    error.message = File.cordovaFileError[error.code];
+                    rejectFn(error);
+                });
+            }, function (err) {
+                err.message = File.cordovaFileError[err.code];
+                rejectFn(err);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Removes all files and the directory from a desired location.
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} dirName Name of directory
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.removeRecursively = function (path, dirName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(dirName))) {
+            rejectFn('directory cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getDirectory(dirName, { create: false }, function (dirEntry) {
+                    dirEntry.removeRecursively(function () {
+                        resolveFn({ success: true, fileRemoved: dirEntry });
+                    }, function (error) {
+                        error.message = File.cordovaFileError[error.code];
+                        rejectFn(error);
+                    });
+                }, function (err) {
+                    err.message = File.cordovaFileError[err.code];
+                    rejectFn(err);
+                });
+            }, function (er) {
+                er.message = File.cordovaFileError[er.code];
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Check if a file exists in a certain path, directory.
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} file Name of file to check
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.checkFile = function (path, file) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(file))) {
+            rejectFn('file cannot start with \/');
+        }
+        try {
+            var directory = path + file;
+            window.resolveLocalFileSystemURL(directory, function (fileSystem) {
+                if (fileSystem.isFile === true) {
+                    resolveFn(fileSystem);
+                }
+                else {
+                    rejectFn({ code: 13, message: 'input is not a file' });
+                }
+            }, function (error) {
+                error.message = File.cordovaFileError[error.code];
+                rejectFn(error);
+            });
+        }
+        catch (err) {
+            err.message = File.cordovaFileError[err.code];
+            rejectFn(err);
+        }
+        return promise;
+    };
+    /**
+     * Creates a new file in the specific path.
+     * The replace boolean value determines whether to replace an existing file with the same name.
+     * If an existing file exists and the replace value is false, the promise will fail and return an error.
+     *
+     * @param {string} path  Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} fileName Name of file to create
+     * @param {boolean} replace If true, replaces file with same name. If false returns error
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.createFile = function (path, fileName, replace) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(fileName))) {
+            rejectFn('file-name cannot start with \/');
+        }
+        replace = replace ? false : true;
+        var options = {
+            create: true,
+            exclusive: replace
+        };
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getFile(fileName, options, function (result) {
+                    resolveFn(result);
+                }, function (error) {
+                    error.message = File.cordovaFileError[error.code];
+                    rejectFn(error);
+                });
+            }, function (err) {
+                err.message = File.cordovaFileError[err.code];
+                rejectFn(err);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Removes a file from a desired location.
+     *
+     * @param {string} path  Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} fileName Name of file to remove
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.removeFile = function (path, fileName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        if ((/^\//.test(fileName))) {
+            rejectFn('file-name cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getFile(fileName, { create: false }, function (fileEntry) {
+                    fileEntry.remove(function () {
+                        resolveFn({ success: true, fileRemoved: fileEntry });
+                    }, function (error) {
+                        error.message = File.cordovaFileError[error.code];
+                        rejectFn(error);
+                    });
+                }, function (err) {
+                    err.message = File.cordovaFileError[err.code];
+                    rejectFn(err);
+                });
+            }, function (er) {
+                er.message = File.cordovaFileError[er.code];
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    // static writeFile(path: string, fileName: string, text: string, replace: boolean): Promise<any> { return }
+    // static writeExistingFile(path: string, fileName: string, text: string): Promise<any> { return }
+    // static readAsText(path: string, file: string): Promise<any> { return }
+    // static readAsDataURL(path: string, file: string): Promise<any> { return }
+    // static readAsBinaryString(path: string, file: string): Promise<any> { return }
+    // static readAsArrayBuffer(path: string, file: string): Promise<any> { return }
+    /**
+     * Move a file to a given path.
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} fileName Name of file to move
+     * @param {string} newPath Base FileSystem of new location
+     * @param {string} newFileName New name of file to move to (leave blank to remain the same)
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.moveFile = function (path, fileName, newPath, newFileName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        newFileName = newFileName || fileName;
+        if ((/^\//.test(newFileName))) {
+            rejectFn('file-name cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getFile(fileName, { create: false }, function (fileEntry) {
+                    window.resolveLocalFileSystemURL(newPath, function (newFileEntry) {
+                        fileEntry.moveTo(newFileEntry, newFileName, function (result) {
+                            resolveFn(result);
+                        }, function (error) {
+                            rejectFn(error);
+                        });
+                    }, function (err) {
+                        rejectFn(err);
+                    });
+                }, function (err) {
+                    rejectFn(err);
+                });
+            }, function (er) {
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            rejectFn(e);
+        }
+        return promise;
+    };
+    /**
+     * Copy a file in various methods. If file exists, will fail to copy.
+     *
+     * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
+     * @param {string} fileName Name of file to copy
+     * @param {string} newPath Base FileSystem of new location
+     * @param {string} newFileName New name of file to copy to (leave blank to remain the same)
+     * @return Returns a Promise that resolves or rejects with an error.
+     */
+    File.copyFile = function (path, fileName, newPath, newFileName) {
+        var resolveFn, rejectFn;
+        var promise = new Promise(function (resolve, reject) { resolveFn = resolve; rejectFn = reject; });
+        newFileName = newFileName || fileName;
+        if ((/^\//.test(newFileName))) {
+            rejectFn('file-name cannot start with \/');
+        }
+        try {
+            window.resolveLocalFileSystemURL(path, function (fileSystem) {
+                fileSystem.getFile(fileName, { create: false, exclusive: false }, function (fileEntry) {
+                    window.resolveLocalFileSystemURL(newPath, function (newFileEntry) {
+                        fileEntry.copyTo(newFileEntry, newFileName, function (result) {
+                            resolveFn(result);
+                        }, function (error) {
+                            error.message = File.cordovaFileError[error.code];
+                            rejectFn(error);
+                        });
+                    }, function (erro) {
+                        erro.message = File.cordovaFileError[erro.code];
+                        rejectFn(erro);
+                    });
+                }, function (err) {
+                    err.message = File.cordovaFileError[err.code];
+                    rejectFn(err);
+                });
+            }, function (er) {
+                er.message = File.cordovaFileError[er.code];
+                rejectFn(er);
+            });
+        }
+        catch (e) {
+            e.message = File.cordovaFileError[e.code];
+            rejectFn(e);
+        }
+        return promise;
+    };
+    File.cordovaFileError = {
+        1: 'NOT_FOUND_ERR',
+        2: 'SECURITY_ERR',
+        3: 'ABORT_ERR',
+        4: 'NOT_READABLE_ERR',
+        5: 'ENCODING_ERR',
+        6: 'NO_MODIFICATION_ALLOWED_ERR',
+        7: 'INVALID_STATE_ERR',
+        8: 'SYNTAX_ERR',
+        9: 'INVALID_MODIFICATION_ERR',
+        10: 'QUOTA_EXCEEDED_ERR',
+        11: 'TYPE_MISMATCH_ERR',
+        12: 'PATH_EXISTS_ERR'
+    };
+    File = __decorate([
+        plugin_1.Plugin({
+            plugin: 'cordova-plugin-file',
+            pluginRef: 'cordova.file',
+            repo: 'https://github.com/apache/cordova-plugin-file'
+        })
+    ], File);
+    return File;
+})();
+exports.File = File;
+
+},{"./plugin":393}],383:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67024,6 +67836,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {Flashlight} from 'ionic-native';
+ *
+ *
+ *
  * ```
  */
 var Flashlight = (function () {
@@ -67082,7 +67898,7 @@ var Flashlight = (function () {
 })();
 exports.Flashlight = Flashlight;
 
-},{"./plugin":389}],382:[function(require,module,exports){
+},{"./plugin":393}],384:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67100,6 +67916,10 @@ var plugin_1 = require('./plugin');
  * @usage
  *
  * ```ts
+ * import {Geolocation} from 'ionic-native';
+ *
+ *
+ *
  * Geolocation.getCurrentPosition().then((resp) => {
  *  //resp.coords.latitude
  *  //resp.coords.longitude
@@ -67162,7 +67982,7 @@ var Geolocation = (function () {
 })();
 exports.Geolocation = Geolocation;
 
-},{"./plugin":389}],383:[function(require,module,exports){
+},{"./plugin":393}],385:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67174,6 +67994,12 @@ var plugin_1 = require('./plugin');
  * @name Globalization
  * @description
  * @usage
+ * ```js
+ * import {Globalization} from 'ionic-native';
+ *
+ *
+ *
+ * ```
  */
 var Globalization = (function () {
     function Globalization() {
@@ -67306,7 +68132,7 @@ var Globalization = (function () {
 })();
 exports.Globalization = Globalization;
 
-},{"./plugin":389}],384:[function(require,module,exports){
+},{"./plugin":393}],386:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67317,8 +68143,13 @@ var plugin_1 = require('./plugin');
 /**
  * @name Hotspot
  * @description
- * @platforms Android
  * @usage
+ * ```js
+ * import {Hotspot} from 'ionic-native';
+ *
+ *
+ *
+ * ```
  */
 var Hotspot = (function () {
     function Hotspot() {
@@ -67438,15 +68269,16 @@ var Hotspot = (function () {
     Hotspot = __decorate([
         plugin_1.Plugin({
             plugin: 'cordova-plugin-hotspot',
-            pluginRef: 'cordova.plugnis.hotspot',
-            repo: 'https://github.com/hypery2k/cordova-hotspot-plugin'
+            pluginRef: 'cordova.plugins.hotspot',
+            repo: 'https://github.com/hypery2k/cordova-hotspot-plugin',
+            platforms: ['Android']
         })
     ], Hotspot);
     return Hotspot;
 })();
 exports.Hotspot = Hotspot;
 
-},{"./plugin":389}],385:[function(require,module,exports){
+},{"./plugin":393}],387:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67464,6 +68296,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {ImagePicker} from 'ionic-native';
+ *
+ *
+ *
  * ImagePicker.getPictures(options).then((results) => {
  *   for (var i = 0; i < results.length; i++) {
  *       console.log('Image URI: ' + results[i]);
@@ -67498,7 +68334,7 @@ var ImagePicker = (function () {
 })();
 exports.ImagePicker = ImagePicker;
 
-},{"./plugin":389}],386:[function(require,module,exports){
+},{"./plugin":393}],388:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67506,6 +68342,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var plugin_1 = require('./plugin');
+var InAppBrowser = (function () {
+    function InAppBrowser() {
+    }
+    /**
+     * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
+     * @param  url     The URL to load.
+     * @param  target  The target in which to load the URL, an optional parameter that defaults to _self.
+     * @param  options Options for the InAppBrowser. Optional, defaulting to: location=yes.
+     *                 The options string must not contain any blank space, and each feature's
+     *                 name/value pairs must be separated by a comma. Feature names are case insensitive.
+     */
+    InAppBrowser.open = function (url, target, options) { return; };
+    __decorate([
+        plugin_1.Cordova({
+            sync: true
+        })
+    ], InAppBrowser, "open", null);
+    InAppBrowser = __decorate([
+        plugin_1.Plugin({
+            plugin: 'cordova-plugin-inappbrowser',
+            pluginRef: 'cordova.InAppBrowser'
+        })
+    ], InAppBrowser);
+    return InAppBrowser;
+})();
+exports.InAppBrowser = InAppBrowser;
+
+},{"./plugin":393}],389:[function(require,module,exports){
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+/**
+ * @name Keyboard
+ * @description
+ * @usage
+ * ```js
+ * import {Keyboard} from 'ionic-native';
+ *
+ *
+ *
+ * ```
+ */
 var Keyboard = (function () {
     function Keyboard() {
     }
@@ -67513,33 +68395,65 @@ var Keyboard = (function () {
      * Hide the keyboard accessory bar with the next, previous and done buttons.
      * @param hide {boolean}
      */
-    Keyboard.hideKeyboardAccessoryBar = function (hide) { };
+    //@Cordova({
+    //  sync: true
+    //})
+    Keyboard.hideKeyboardAccessoryBar = function (hide) {
+        console.log("hideKeyboardAccessoryBar method has been removed temporarily.");
+    };
+    /**
+     * Force keyboard to be shown.
+     */
+    Keyboard.show = function () { };
     /**
      * Close the keyboard if open
      */
     Keyboard.close = function () { };
+    /**
+     * Prevents the native UIScrollView from moving when an input is focused.
+     * @param disable
+     */
     Keyboard.disableScroll = function (disable) { };
-    Keyboard.show = function () { };
+    /**
+     * Creates an observable that notifies you when the keyboard is shown. Unsubscribe to observable to cancel event watch.
+     */
+    Keyboard.onKeyboardShow = function () { return; };
+    /**
+     * Creates an observable that notifies you when the keyboard is hidden. Unsubscribe to observable to cancel event watch.
+     */
+    Keyboard.onKeyboardHide = function () { return; };
     __decorate([
         plugin_1.Cordova({
-            sync: true
+            sync: true,
+            platforms: ['Android', 'BlackBerry 10', 'Windows']
         })
-    ], Keyboard, "hideKeyboardAccessoryBar", null);
+    ], Keyboard, "show", null);
     __decorate([
         plugin_1.Cordova({
-            sync: true
+            sync: true,
+            platforms: ['iOS', 'Android', 'BlackBerry 10', 'Windows']
         })
     ], Keyboard, "close", null);
     __decorate([
         plugin_1.Cordova({
-            sync: true
+            sync: true,
+            platforms: ['iOS', 'Windows']
         })
     ], Keyboard, "disableScroll", null);
     __decorate([
         plugin_1.Cordova({
-            sync: true
+            eventObservable: true,
+            event: 'native.keyboardshow',
+            platforms: ['iOS', 'Android', 'BlackBerry 10', 'Windows']
         })
-    ], Keyboard, "show", null);
+    ], Keyboard, "onKeyboardShow", null);
+    __decorate([
+        plugin_1.Cordova({
+            eventObservable: true,
+            event: 'native.keyboardhide',
+            platforms: ['iOS', 'Android', 'BlackBerry 10', 'Windows']
+        })
+    ], Keyboard, "onKeyboardHide", null);
     Keyboard = __decorate([
         plugin_1.Plugin({
             plugin: 'ionic-plugin-keyboard',
@@ -67551,7 +68465,7 @@ var Keyboard = (function () {
 })();
 exports.Keyboard = Keyboard;
 
-},{"./plugin":389}],387:[function(require,module,exports){
+},{"./plugin":393}],390:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67566,6 +68480,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```js
+ * import {LaunchNavigator} from 'ionic-native';
+ *
+ *
+ *
  * LaunchNavigator.navigate("Toronto, ON", "London, ON")
  *   .then(
  *     success => console.log("Launched navigator"),
@@ -67583,7 +68501,10 @@ var LaunchNavigator = (function () {
      * @param options
      * @returns {Promise<any>}
      */
-    LaunchNavigator.navigate = function (destination, start, options) { return; };
+    LaunchNavigator.navigate = function (destination, start, options) {
+        if (start === void 0) { start = null; }
+        return;
+    };
     __decorate([
         plugin_1.Cordova({
             successIndex: 2,
@@ -67601,7 +68522,7 @@ var LaunchNavigator = (function () {
 })();
 exports.LaunchNavigator = LaunchNavigator;
 
-},{"./plugin":389}],388:[function(require,module,exports){
+},{"./plugin":393}],391:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67616,6 +68537,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```ts
+ * import {LocalNotifications} from 'ionic-native';
+ *
+ *
+ *
  * // Schedule a single notification
  * LocalNotifications.schedule({
  *   id: 1,
@@ -67820,7 +68745,149 @@ var LocalNotifications = (function () {
 })();
 exports.LocalNotifications = LocalNotifications;
 
-},{"./plugin":389}],389:[function(require,module,exports){
+},{"./plugin":393}],392:[function(require,module,exports){
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+/**
+ * @name Network
+ * @description
+ * Requires Cordova plugin: cordova-plugin-network-information. For more info, please see the [Network plugin docs](https://github.com/apache/cordova-plugin-network-information).
+ *
+ * @usage
+ * ```js
+ * import {Network, Connection} from 'ionic-native';
+ *
+ * // watch network for a disconnect
+ * let disconnectSubscription = Network.onDisconnect().subscribe(() => {
+ *   console.log('network was disconnected :-( ')
+ * });
+ *
+ * // stop disconnect watch
+ * disconnectSubscription.unsubscribe();
+ *
+ *
+ * // watch network for a connection
+ * let connectSubscription = Network.onConnect().subscribe(() => {
+ *   console.log('network connected!');
+*
+ *   // We just got a connection but we need to wait briefly
+ *
+// before we determine the connection type.  Might need to wait
+
+ *   // prior to doing any api requests as well.
+ *   setTimeout(() => {
+ *     console.log(Network.connection);
+ *     if (Network.connection === Connection.WIFI) {
+ *       console.log('we got a wifi connection, woohoo!');
+ *     }
+ *   });
+ * });
+ *
+ * // stop connect watch
+ * connectSubscription.unsubscribe();
+ *
+ * ```
+ */
+var Network = (function () {
+    function Network() {
+    }
+    Object.defineProperty(Network, "connection", {
+        /**
+         * Return the network connection type
+         */
+        get: function () { return navigator.connection.type; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Watch the network for a disconnect (i.e. network goes offline)
+     * @returns {Observable<any>} Returns an observable.
+     */
+    Network.onDisconnect = function () { return; };
+    /**
+     * Watch the network for a connection (i.e. network goes online)
+     * @returns {Observable<any>} Returns an observable.
+     */
+    Network.onConnect = function () { return; };
+    __decorate([
+        plugin_1.CordovaProperty
+    ], Network, "connection", null);
+    __decorate([
+        plugin_1.Cordova({
+            eventObservable: true,
+            event: 'offline'
+        })
+    ], Network, "onDisconnect", null);
+    __decorate([
+        plugin_1.Cordova({
+            eventObservable: true,
+            event: 'online'
+        })
+    ], Network, "onConnect", null);
+    Network = __decorate([
+        plugin_1.Plugin({
+            plugin: 'cordova-plugin-network-information',
+            repo: 'https://github.com/apache/cordova-plugin-network-information',
+            platforms: ['Amazon Fire OS', 'iOS', 'Android', 'BlackBerry 10', 'Windows Phone 7', 'Windows Phone 8', 'Windows', 'Firefox OS', 'Browser'],
+            pluginRef: 'navigator.connection'
+        })
+    ], Network);
+    return Network;
+})();
+exports.Network = Network;
+var Connection = (function () {
+    function Connection() {
+    }
+    Object.defineProperty(Connection, "UNKNOWN", {
+        get: function () { return "unknown"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "ETHERNET", {
+        get: function () { return "ethernet"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "WIFI", {
+        get: function () { return "wifi"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "CELL_2G", {
+        get: function () { return "2g"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "CELL_3G", {
+        get: function () { return "3g"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "CELL_4G", {
+        get: function () { return "4g"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "CELL", {
+        get: function () { return "cellular"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Connection, "NONE", {
+        get: function () { return "none"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Connection;
+})();
+exports.Connection = Connection;
+
+},{"./plugin":393}],393:[function(require,module,exports){
 var util_1 = require('../util');
 var Observable_1 = require('rxjs/Observable');
 /**
@@ -68070,7 +69137,7 @@ function CordovaProperty(target, key, descriptor) {
 }
 exports.CordovaProperty = CordovaProperty;
 
-},{"../util":397,"rxjs/Observable":398}],390:[function(require,module,exports){
+},{"../util":403,"rxjs/Observable":405}],394:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68086,6 +69153,14 @@ var plugin_1 = require('./plugin');
  * Requires Cordova plugin: `phonegap-plugin-push`. For more info, please see the [Push plugin docs](https://github.com/phonegap/phonegap-plugin-push).
  *
  * For TypeScript users, see the [Push plugin docs about using TypeScript for custom notifications](https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/TYPESCRIPT.md).
+ *
+ * @usage
+ * ```js
+ * import {Push} from 'ionic-native';
+ *
+ *
+ *
+ * ```
  */
 var Push = (function () {
     function Push() {
@@ -68135,7 +69210,7 @@ var Push = (function () {
 })();
 exports.Push = Push;
 
-},{"./plugin":389}],391:[function(require,module,exports){
+},{"./plugin":393}],395:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68151,6 +69226,9 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```ts
+ * import {SMS} from 'ionic-native';
+ *
+ *
  *
  * // Send a text message using default options
  * SMS.send('416123456','Hello world!');
@@ -68183,7 +69261,224 @@ var SMS = (function () {
 })();
 exports.SMS = SMS;
 
-},{"./plugin":389}],392:[function(require,module,exports){
+},{"./plugin":393}],396:[function(require,module,exports){
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+/**
+ * @name Social Sharing
+ * @description
+ * Share text, files, images, and links via social networks, sms, and email.
+ * @usage
+ * ```js
+ * import {SocialSharing} from 'ionic-native';
+ *
+ * ...
+ * // TODO add usage info
+ * ```
+ */
+var SocialSharing = (function () {
+    function SocialSharing() {
+    }
+    /**
+     * Shares using the share sheet
+     * @param message {string} The message you would like to share.
+     * @param subject {string} The subject
+     * @param file {string|Array<string>} URL(s) to file(s) or image(s), local path(s) to file(s) or image(s), or base64 data of an image. Only the first file/image will be used on Windows Phone.
+     * @param url {string} A URL to share
+     */
+    SocialSharing.share = function (message, subject, file, url) { };
+    /**
+     * Checks if you can share via a specific app.
+     * @param appName App name or package name. Examples: instagram or com.apple.social.facebook
+     */
+    SocialSharing.canShareVia = function (appName) { return; };
+    /**
+     * Shares directly to Twitter
+     * @param message
+     * @param image
+     * @param url
+     */
+    SocialSharing.shareViaTwitter = function (message, image, url) { };
+    /**
+     * Shares directly to Facebook
+     * @param message {string}
+     * @param image {string}
+     * @param url {string}
+     */
+    SocialSharing.shareViaFacebook = function (message, image, url) { return; };
+    /**
+     * Shares directly to Facebook with a paste message hint
+     * @param message {string}
+     * @param image {string}
+     * @param url {string}
+     * @param pasteMessageHint {string}
+     */
+    SocialSharing.shareViaFacebookWithPasteMessageHint = function (message, image, url, pasteMessageHint) { return; };
+    /**
+     * Shares directly to Instagram
+     * @param message {string}
+     * @param image {string}
+     */
+    SocialSharing.shareViaInstagram = function (message, image) { return; };
+    /**
+     * Shares directly to WhatsApp
+     * @param message {string}
+     * @param image {string}
+     * @param url {string}
+     */
+    SocialSharing.shareViaWhatsApp = function (message, image, url) { return; };
+    /**
+     * Shares directly to a WhatsApp Contact
+     * @param receiver {string} Pass phone number on Android, and Addressbook ID (abid) on iOS
+     * @param message {string} Message to send
+     * @param image {string} Image to send (does not work on iOS
+     * @param url {string} Link to send
+     */
+    SocialSharing.shareViaWhatsAppToReceiver = function (receiver, message, image, url) { return; };
+    /**
+     * Share via SMS
+     * @param messge {string} message to send
+     * @param number {string} Number or multiple numbers seperated by commas
+     */
+    SocialSharing.shareViaSMS = function (messge, number) { return; };
+    /**
+     * Share via Email
+     * @param message {string}
+     * @param subject {string}
+     * @param to {Array<string>}
+     * @param cc {Array<string>}
+     * @param bcc {Array<string>}
+     * @param files {string|Array<string>} URL or local path to file(s) to attach
+     */
+    SocialSharing.shareViaEmail = function (message, subject, to, cc, bcc, files) { return; };
+    __decorate([
+        plugin_1.Cordova({
+            sync: true
+        })
+    ], SocialSharing, "share", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "canShareVia", null);
+    __decorate([
+        plugin_1.Cordova({
+            sync: true,
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaTwitter", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaFacebook", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaFacebookWithPasteMessageHint", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaInstagram", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaWhatsApp", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaWhatsAppToReceiver", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaSMS", null);
+    __decorate([
+        plugin_1.Cordova({
+            platforms: ['iOS', 'Android']
+        })
+    ], SocialSharing, "shareViaEmail", null);
+    SocialSharing = __decorate([
+        plugin_1.Plugin({
+            plugin: 'cordova-plugin-x-socialsharing',
+            pluginRef: 'window.plugins.socialsharing',
+            repo: 'https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin',
+            platforms: ['iOS', 'Android', 'Windows Phone']
+        })
+    ], SocialSharing);
+    return SocialSharing;
+})();
+exports.SocialSharing = SocialSharing;
+
+},{"./plugin":393}],397:[function(require,module,exports){
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+/**
+ * @name Spinner Dialog
+ * @description
+ * @usage
+ * ```js
+ * import {SpinnerDialog} from 'ionic-native';
+ *
+ *
+ *
+ * SpinnerDialog.show();
+ *
+ * SpinnerDialog.hide();
+ * ```
+ */
+var SpinnerDialog = (function () {
+    function SpinnerDialog() {
+    }
+    /**
+     * Shows the spinner dialog
+     * @param title {string} Spinner title (shows on Android only)
+     * @param message {string} Spinner message
+     * @param cancelCallback {boolean|function} Set to false to set spinner not cancelable. Or provide a function to call when the user cancels the spinner.
+     * @param iOSOptions {object} Options for iOS only
+     */
+    SpinnerDialog.show = function (title, message, cancelCallback, iOSOptions) { };
+    /**
+     * Hides the spinner dialog if visible
+     */
+    SpinnerDialog.hide = function () { };
+    __decorate([
+        plugin_1.Cordova({
+            sync: true
+        })
+    ], SpinnerDialog, "show", null);
+    __decorate([
+        plugin_1.Cordova({
+            sync: true
+        })
+    ], SpinnerDialog, "hide", null);
+    SpinnerDialog = __decorate([
+        plugin_1.Plugin({
+            plugin: 'cordova-plugin-spinner-dialog',
+            pluginRef: 'window.plugins.spinnerDialog',
+            repo: 'https://github.com/Paldom/SpinnerDialog',
+            platforms: ['Android', 'iOS', 'Windows Phone 8']
+        })
+    ], SpinnerDialog);
+    return SpinnerDialog;
+})();
+exports.SpinnerDialog = SpinnerDialog;
+
+},{"./plugin":393}],398:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68196,6 +69491,10 @@ var plugin_1 = require('./plugin');
  * @description This plugin displays and hides a splash screen during application launch. The methods below allows showing and hiding the splashscreen after the app has loaded.
  * @usage
  * ```ts
+ * import {Splashscreen} from 'ionic-native';
+ *
+ *
+ *
  * Splashscreen.show();
  *
  * Splashscreen.hide();
@@ -68233,7 +69532,7 @@ var Splashscreen = (function () {
 })();
 exports.Splashscreen = Splashscreen;
 
-},{"./plugin":389}],393:[function(require,module,exports){
+},{"./plugin":393}],399:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68242,7 +69541,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var plugin_1 = require('./plugin');
 /**
- * @name StatusBar
+ * @name Status Bar
  * @description
  * Manage the appearance of the native status bar.
  *
@@ -68250,6 +69549,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```ts
+ * import {StatusBar} from 'ionic-native';
+ *
+ *
+ *
  * StatuBar.overlaysWebView(true);
  *
  * StatusBar.
@@ -68383,7 +69686,7 @@ var StatusBar = (function () {
 })();
 exports.StatusBar = StatusBar;
 
-},{"./plugin":389}],394:[function(require,module,exports){
+},{"./plugin":393}],400:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68400,6 +69703,10 @@ var plugin_1 = require('./plugin');
  *
  * @usage
  * ```ts
+ * import {Toast} from 'ionic-native';
+ *
+ *
+ *
  * Toast.show("I'm a toast", 5000, "center").subscribe(
  *   toast => {
  *     console.log(toast);
@@ -68414,7 +69721,7 @@ var Toast = (function () {
      * Show a native toast for the given duration at the specified position.
      *
      * @param {string} message  The message to display.
-     * @param {string} duration  Duration to show the toast, either 'short' or 'long'.
+     * @param {string} duration  Duration to show the toast, either 'short', 'long' or any number of milliseconds: '1500'.
      * @param {string} position  Where to position the toast, either 'top', 'center', or 'bottom'.
      * @return {Observable}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
@@ -68429,7 +69736,7 @@ var Toast = (function () {
      *
      * @param {Object} options  Options for showing a toast. Available options:
      *   message  The message to display.
-     *   duration  Duration to show the toast, either 'short' or 'long'.
+     *   duration  Duration to show the toast, either 'short', 'long' or any number of milliseconds: '1500'.
      *   position  Where to position the toast, either 'top', 'center', or 'bottom'.
      *   addPixelsY  Offset in pixels to move the toast up or down from its specified position.
      *
@@ -68528,7 +69835,7 @@ var Toast = (function () {
 })();
 exports.Toast = Toast;
 
-},{"./plugin":389}],395:[function(require,module,exports){
+},{"./plugin":393}],401:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68555,7 +69862,13 @@ var plugin_1 = require('./plugin');
  *  -  `-4` - The scan was cancelled by the system (Home button for example)
  *  -  `-6` - TouchID is not Available
  *  -  `-8` - TouchID is locked out from too many tries
+ * @usage
+ * ```js
+ * import {TouchID} from 'ionic-native';
  *
+ *
+ *
+ * ```
  */
 var TouchID = (function () {
     function TouchID() {
@@ -68611,7 +69924,7 @@ var TouchID = (function () {
 })();
 exports.TouchID = TouchID;
 
-},{"./plugin":389}],396:[function(require,module,exports){
+},{"./plugin":393}],402:[function(require,module,exports){
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68624,6 +69937,10 @@ var plugin_1 = require('./plugin');
  * @description Vibrates the device
  * @usage
  * ```ts
+ * import {Vibration} from 'ionic-native';
+ *
+ *
+ *
  * // Vibrate the device for a second
  * Vibration.vibrate(1000);
  *
@@ -68662,7 +69979,7 @@ var Vibration = (function () {
 })();
 exports.Vibration = Vibration;
 
-},{"./plugin":389}],397:[function(require,module,exports){
+},{"./plugin":393}],403:[function(require,module,exports){
 function get(obj, path) {
     for (var i = 0, path = path.split('.'), len = path.length; i < len; i++) {
         if (!obj) {
@@ -68675,481 +69992,7 @@ function get(obj, path) {
 exports.get = get;
 ;
 
-},{}],398:[function(require,module,exports){
-var Subscriber_1 = require('./Subscriber');
-var root_1 = require('./util/root');
-var SymbolShim_1 = require('./util/SymbolShim');
-var rxSubscriber_1 = require('./symbol/rxSubscriber');
-/**
- * A representation of any set of values over any amount of time. This the most basic building block
- * of RxJS.
- *
- * @class Observable<T>
- */
-var Observable = (function () {
-    /**
-     * @constructor
-     * @param {Function} subscribe the function that is
-     * called when the Observable is initially subscribed to. This function is given a Subscriber, to which new values
-     * can be `next`ed, or an `error` method can be called to raise an error, or `complete` can be called to notify
-     * of a successful completion.
-     */
-    function Observable(subscribe) {
-        this._isScalar = false;
-        if (subscribe) {
-            this._subscribe = subscribe;
-        }
-    }
-    /**
-     * @method lift
-     * @param {Operator} operator the operator defining the operation to take on the observable
-     * @returns {Observable} a new observable with the Operator applied
-     * @description creates a new Observable, with this Observable as the source, and the passed
-     * operator defined as the new observable's operator.
-     */
-    Observable.prototype.lift = function (operator) {
-        var observable = new Observable();
-        observable.source = this;
-        observable.operator = operator;
-        return observable;
-    };
-    /**
-     * @method Symbol.observable
-     * @returns {Observable} this instance of the observable
-     * @description an interop point defined by the es7-observable spec https://github.com/zenparsing/es-observable
-     */
-    Observable.prototype[SymbolShim_1.SymbolShim.observable] = function () {
-        return this;
-    };
-    /**
-     * @method subscribe
-     * @param {Observer|Function} observerOrNext (optional) either an observer defining all functions to be called,
-     *  or the first of three possible handlers, which is the handler for each value emitted from the observable.
-     * @param {Function} error (optional) a handler for a terminal event resulting from an error. If no error handler is provided,
-     *  the error will be thrown as unhandled
-     * @param {Function} complete (optional) a handler for a terminal event resulting from successful completion.
-     * @returns {Subscription} a subscription reference to the registered handlers
-     * @description registers handlers for handling emitted values, error and completions from the observable, and
-     *  executes the observable's subscriber function, which will take action to set up the underlying data stream
-     */
-    Observable.prototype.subscribe = function (observerOrNext, error, complete) {
-        var subscriber;
-        if (observerOrNext && typeof observerOrNext === 'object') {
-            if (observerOrNext instanceof Subscriber_1.Subscriber) {
-                subscriber = observerOrNext;
-            }
-            else if (observerOrNext[rxSubscriber_1.rxSubscriber]) {
-                subscriber = observerOrNext[rxSubscriber_1.rxSubscriber]();
-            }
-            else {
-                subscriber = new Subscriber_1.Subscriber(observerOrNext);
-            }
-        }
-        else {
-            var next = observerOrNext;
-            subscriber = Subscriber_1.Subscriber.create(next, error, complete);
-        }
-        subscriber.add(this._subscribe(subscriber));
-        return subscriber;
-    };
-    /**
-     * @method forEach
-     * @param {Function} next a handler for each value emitted by the observable
-     * @param {any} [thisArg] a `this` context for the `next` handler function
-     * @param {PromiseConstructor} [PromiseCtor] a constructor function used to instantiate the Promise
-     * @returns {Promise} a promise that either resolves on observable completion or
-     *  rejects with the handled error
-     */
-    Observable.prototype.forEach = function (next, thisArg, PromiseCtor) {
-        if (!PromiseCtor) {
-            if (root_1.root.Rx && root_1.root.Rx.config && root_1.root.Rx.config.Promise) {
-                PromiseCtor = root_1.root.Rx.config.Promise;
-            }
-            else if (root_1.root.Promise) {
-                PromiseCtor = root_1.root.Promise;
-            }
-        }
-        if (!PromiseCtor) {
-            throw new Error('no Promise impl found');
-        }
-        var nextHandler;
-        if (thisArg) {
-            nextHandler = function nextHandlerFn(value) {
-                var _a = nextHandlerFn, thisArg = _a.thisArg, next = _a.next;
-                return next.call(thisArg, value);
-            };
-            nextHandler.thisArg = thisArg;
-            nextHandler.next = next;
-        }
-        else {
-            nextHandler = next;
-        }
-        var promiseCallback = function promiseCallbackFn(resolve, reject) {
-            var _a = promiseCallbackFn, source = _a.source, nextHandler = _a.nextHandler;
-            source.subscribe(nextHandler, reject, resolve);
-        };
-        promiseCallback.source = this;
-        promiseCallback.nextHandler = nextHandler;
-        return new PromiseCtor(promiseCallback);
-    };
-    Observable.prototype._subscribe = function (subscriber) {
-        return this.source._subscribe(this.operator.call(subscriber));
-    };
-    // HACK: Since TypeScript inherits static properties too, we have to
-    // fight against TypeScript here so Subject can have a different static create signature
-    /**
-     * @static
-     * @method create
-     * @param {Function} subscribe? the subscriber function to be passed to the Observable constructor
-     * @returns {Observable} a new cold observable
-     * @description creates a new cold Observable by calling the Observable constructor
-     */
-    Observable.create = function (subscribe) {
-        return new Observable(subscribe);
-    };
-    return Observable;
-})();
-exports.Observable = Observable;
-
-},{"./Subscriber":399,"./symbol/rxSubscriber":401,"./util/SymbolShim":402,"./util/root":404}],399:[function(require,module,exports){
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var noop_1 = require('./util/noop');
-var throwError_1 = require('./util/throwError');
-var tryOrOnError_1 = require('./util/tryOrOnError');
-var Subscription_1 = require('./Subscription');
-var rxSubscriber_1 = require('./symbol/rxSubscriber');
-var Subscriber = (function (_super) {
-    __extends(Subscriber, _super);
-    function Subscriber(destination) {
-        _super.call(this);
-        this.destination = destination;
-        this._isUnsubscribed = false;
-        if (!this.destination) {
-            return;
-        }
-        var subscription = destination._subscription;
-        if (subscription) {
-            this._subscription = subscription;
-        }
-        else if (destination instanceof Subscriber) {
-            this._subscription = destination;
-        }
-    }
-    Subscriber.prototype[rxSubscriber_1.rxSubscriber] = function () {
-        return this;
-    };
-    Object.defineProperty(Subscriber.prototype, "isUnsubscribed", {
-        get: function () {
-            var subscription = this._subscription;
-            if (subscription) {
-                // route to the shared Subscription if it exists
-                return this._isUnsubscribed || subscription.isUnsubscribed;
-            }
-            else {
-                return this._isUnsubscribed;
-            }
-        },
-        set: function (value) {
-            var subscription = this._subscription;
-            if (subscription) {
-                // route to the shared Subscription if it exists
-                subscription.isUnsubscribed = Boolean(value);
-            }
-            else {
-                this._isUnsubscribed = Boolean(value);
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Subscriber.create = function (next, error, complete) {
-        var subscriber = new Subscriber();
-        subscriber._next = (typeof next === 'function') && tryOrOnError_1.tryOrOnError(next) || noop_1.noop;
-        subscriber._error = (typeof error === 'function') && error || throwError_1.throwError;
-        subscriber._complete = (typeof complete === 'function') && complete || noop_1.noop;
-        return subscriber;
-    };
-    Subscriber.prototype.add = function (sub) {
-        // route add to the shared Subscription if it exists
-        var _subscription = this._subscription;
-        if (_subscription) {
-            _subscription.add(sub);
-        }
-        else {
-            _super.prototype.add.call(this, sub);
-        }
-    };
-    Subscriber.prototype.remove = function (sub) {
-        // route remove to the shared Subscription if it exists
-        if (this._subscription) {
-            this._subscription.remove(sub);
-        }
-        else {
-            _super.prototype.remove.call(this, sub);
-        }
-    };
-    Subscriber.prototype.unsubscribe = function () {
-        if (this._isUnsubscribed) {
-            return;
-        }
-        else if (this._subscription) {
-            this._isUnsubscribed = true;
-        }
-        else {
-            _super.prototype.unsubscribe.call(this);
-        }
-    };
-    Subscriber.prototype._next = function (value) {
-        var destination = this.destination;
-        if (destination.next) {
-            destination.next(value);
-        }
-    };
-    Subscriber.prototype._error = function (err) {
-        var destination = this.destination;
-        if (destination.error) {
-            destination.error(err);
-        }
-    };
-    Subscriber.prototype._complete = function () {
-        var destination = this.destination;
-        if (destination.complete) {
-            destination.complete();
-        }
-    };
-    Subscriber.prototype.next = function (value) {
-        if (!this.isUnsubscribed) {
-            this._next(value);
-        }
-    };
-    Subscriber.prototype.error = function (err) {
-        if (!this.isUnsubscribed) {
-            this._error(err);
-            this.unsubscribe();
-        }
-    };
-    Subscriber.prototype.complete = function () {
-        if (!this.isUnsubscribed) {
-            this._complete();
-            this.unsubscribe();
-        }
-    };
-    return Subscriber;
-})(Subscription_1.Subscription);
-exports.Subscriber = Subscriber;
-
-},{"./Subscription":400,"./symbol/rxSubscriber":401,"./util/noop":403,"./util/throwError":405,"./util/tryOrOnError":406}],400:[function(require,module,exports){
-var noop_1 = require('./util/noop');
-var Subscription = (function () {
-    function Subscription(_unsubscribe) {
-        this.isUnsubscribed = false;
-        if (_unsubscribe) {
-            this._unsubscribe = _unsubscribe;
-        }
-    }
-    Subscription.prototype._unsubscribe = function () {
-        noop_1.noop();
-    };
-    Subscription.prototype.unsubscribe = function () {
-        if (this.isUnsubscribed) {
-            return;
-        }
-        this.isUnsubscribed = true;
-        var unsubscribe = this._unsubscribe;
-        var subscriptions = this._subscriptions;
-        this._subscriptions = void 0;
-        if (unsubscribe) {
-            unsubscribe.call(this);
-        }
-        if (subscriptions != null) {
-            var index = -1;
-            var len = subscriptions.length;
-            while (++index < len) {
-                subscriptions[index].unsubscribe();
-            }
-        }
-    };
-    Subscription.prototype.add = function (subscription) {
-        // return early if:
-        //  1. the subscription is null
-        //  2. we're attempting to add our this
-        //  3. we're attempting to add the static `empty` Subscription
-        if (!subscription || (subscription === this) || (subscription === Subscription.EMPTY)) {
-            return;
-        }
-        var sub = subscription;
-        switch (typeof subscription) {
-            case 'function':
-                sub = new Subscription(subscription);
-            case 'object':
-                if (sub.isUnsubscribed || typeof sub.unsubscribe !== 'function') {
-                    break;
-                }
-                else if (this.isUnsubscribed) {
-                    sub.unsubscribe();
-                }
-                else {
-                    var subscriptions = this._subscriptions || (this._subscriptions = []);
-                    subscriptions.push(sub);
-                }
-                break;
-            default:
-                throw new Error('Unrecognized subscription ' + subscription + ' added to Subscription.');
-        }
-    };
-    Subscription.prototype.remove = function (subscription) {
-        // return early if:
-        //  1. the subscription is null
-        //  2. we're attempting to remove ourthis
-        //  3. we're attempting to remove the static `empty` Subscription
-        if (subscription == null || (subscription === this) || (subscription === Subscription.EMPTY)) {
-            return;
-        }
-        var subscriptions = this._subscriptions;
-        if (subscriptions) {
-            var subscriptionIndex = subscriptions.indexOf(subscription);
-            if (subscriptionIndex !== -1) {
-                subscriptions.splice(subscriptionIndex, 1);
-            }
-        }
-    };
-    Subscription.EMPTY = (function (empty) {
-        empty.isUnsubscribed = true;
-        return empty;
-    }(new Subscription()));
-    return Subscription;
-})();
-exports.Subscription = Subscription;
-
-},{"./util/noop":403}],401:[function(require,module,exports){
-var SymbolShim_1 = require('../util/SymbolShim');
-/**
- * rxSubscriber symbol is a symbol for retreiving an "Rx safe" Observer from an object
- * "Rx safety" can be defined as an object that has all of the traits of an Rx Subscriber,
- * including the ability to add and remove subscriptions to the subscription chain and
- * guarantees involving event triggering (can't "next" after unsubscription, etc).
- */
-exports.rxSubscriber = SymbolShim_1.SymbolShim.for('rxSubscriber');
-
-},{"../util/SymbolShim":402}],402:[function(require,module,exports){
-var root_1 = require('./root');
-function polyfillSymbol(root) {
-    var Symbol = ensureSymbol(root);
-    ensureIterator(Symbol, root);
-    ensureObservable(Symbol);
-    ensureFor(Symbol);
-    return Symbol;
-}
-exports.polyfillSymbol = polyfillSymbol;
-function ensureFor(Symbol) {
-    if (!Symbol.for) {
-        Symbol.for = symbolForPolyfill;
-    }
-}
-exports.ensureFor = ensureFor;
-var id = 0;
-function ensureSymbol(root) {
-    if (!root.Symbol) {
-        root.Symbol = function symbolFuncPolyfill(description) {
-            return "@@Symbol(" + description + "):" + id++;
-        };
-    }
-    return root.Symbol;
-}
-exports.ensureSymbol = ensureSymbol;
-function symbolForPolyfill(key) {
-    return '@@' + key;
-}
-exports.symbolForPolyfill = symbolForPolyfill;
-function ensureIterator(Symbol, root) {
-    if (!Symbol.iterator) {
-        if (typeof Symbol.for === 'function') {
-            Symbol.iterator = Symbol.for('iterator');
-        }
-        else if (root.Set && typeof new root.Set()['@@iterator'] === 'function') {
-            // Bug for mozilla version
-            Symbol.iterator = '@@iterator';
-        }
-        else if (root.Map) {
-            // es6-shim specific logic
-            var keys = Object.getOwnPropertyNames(root.Map.prototype);
-            for (var i = 0; i < keys.length; ++i) {
-                var key = keys[i];
-                if (key !== 'entries' && key !== 'size' && root.Map.prototype[key] === root.Map.prototype['entries']) {
-                    Symbol.iterator = key;
-                    break;
-                }
-            }
-        }
-        else {
-            Symbol.iterator = '@@iterator';
-        }
-    }
-}
-exports.ensureIterator = ensureIterator;
-function ensureObservable(Symbol) {
-    if (!Symbol.observable) {
-        if (typeof Symbol.for === 'function') {
-            Symbol.observable = Symbol.for('observable');
-        }
-        else {
-            Symbol.observable = '@@observable';
-        }
-    }
-}
-exports.ensureObservable = ensureObservable;
-exports.SymbolShim = polyfillSymbol(root_1.root);
-
-},{"./root":404}],403:[function(require,module,exports){
-/* tslint:disable:no-empty */
-function noop() { }
-exports.noop = noop;
-
 },{}],404:[function(require,module,exports){
-(function (global){
-var objectTypes = {
-    'boolean': false,
-    'function': true,
-    'object': true,
-    'number': false,
-    'string': false,
-    'undefined': false
-};
-exports.root = (objectTypes[typeof self] && self) || (objectTypes[typeof window] && window);
-/* tslint:disable:no-unused-variable */
-var freeExports = objectTypes[typeof exports] && exports && !exports.nodeType && exports;
-var freeModule = objectTypes[typeof module] && module && !module.nodeType && module;
-var freeGlobal = objectTypes[typeof global] && global;
-if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal)) {
-    exports.root = freeGlobal;
-}
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
-},{}],405:[function(require,module,exports){
-function throwError(e) { throw e; }
-exports.throwError = throwError;
-
-},{}],406:[function(require,module,exports){
-function tryOrOnError(target) {
-    function tryCatcher() {
-        try {
-            tryCatcher.target.apply(this, arguments);
-        }
-        catch (e) {
-            this.error(e);
-        }
-    }
-    tryCatcher.target = target;
-    return tryCatcher;
-}
-exports.tryOrOnError = tryOrOnError;
-
-},{}],407:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -69242,7 +70085,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],408:[function(require,module,exports){
+},{}],405:[function(require,module,exports){
 "use strict";
 var root_1 = require('./util/root');
 var SymbolShim_1 = require('./util/SymbolShim');
@@ -69367,7 +70210,7 @@ var Observable = (function () {
 }());
 exports.Observable = Observable;
 
-},{"./util/SymbolShim":418,"./util/errorObject":419,"./util/root":423,"./util/toSubscriber":425,"./util/tryCatch":426}],409:[function(require,module,exports){
+},{"./util/SymbolShim":415,"./util/errorObject":416,"./util/root":420,"./util/toSubscriber":422,"./util/tryCatch":423}],406:[function(require,module,exports){
 "use strict";
 exports.empty = {
     isUnsubscribed: true,
@@ -69376,7 +70219,7 @@ exports.empty = {
     complete: function () { }
 };
 
-},{}],410:[function(require,module,exports){
+},{}],407:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -69574,7 +70417,7 @@ var SubjectObservable = (function (_super) {
     return SubjectObservable;
 }(Observable_1.Observable));
 
-},{"./Observable":408,"./Subscriber":411,"./Subscription":412,"./subject/SubjectSubscription":415,"./symbol/rxSubscriber":416,"./util/ObjectUnsubscribedError":417,"./util/throwError":424}],411:[function(require,module,exports){
+},{"./Observable":405,"./Subscriber":408,"./Subscription":409,"./subject/SubjectSubscription":412,"./symbol/rxSubscriber":413,"./util/ObjectUnsubscribedError":414,"./util/throwError":421}],408:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -69767,7 +70610,7 @@ var SafeSubscriber = (function (_super) {
     return SafeSubscriber;
 }(Subscriber));
 
-},{"./Observer":409,"./Subscription":412,"./symbol/rxSubscriber":416,"./util/isFunction":421}],412:[function(require,module,exports){
+},{"./Observer":406,"./Subscription":409,"./symbol/rxSubscriber":413,"./util/isFunction":418}],409:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -69888,7 +70731,7 @@ var UnsubscriptionError = (function (_super) {
 }(Error));
 exports.UnsubscriptionError = UnsubscriptionError;
 
-},{"./util/errorObject":419,"./util/isArray":420,"./util/isFunction":421,"./util/isObject":422,"./util/tryCatch":426}],413:[function(require,module,exports){
+},{"./util/errorObject":416,"./util/isArray":417,"./util/isFunction":418,"./util/isObject":419,"./util/tryCatch":423}],410:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -69981,7 +70824,7 @@ function dispatchError(_a) {
     }
 }
 
-},{"../Observable":408,"../util/root":423}],414:[function(require,module,exports){
+},{"../Observable":405,"../util/root":420}],411:[function(require,module,exports){
 "use strict";
 var root_1 = require('../util/root');
 function toPromise(PromiseCtor) {
@@ -70004,7 +70847,7 @@ function toPromise(PromiseCtor) {
 }
 exports.toPromise = toPromise;
 
-},{"../util/root":423}],415:[function(require,module,exports){
+},{"../util/root":420}],412:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -70040,7 +70883,7 @@ var SubjectSubscription = (function (_super) {
 }(Subscription_1.Subscription));
 exports.SubjectSubscription = SubjectSubscription;
 
-},{"../Subscription":412}],416:[function(require,module,exports){
+},{"../Subscription":409}],413:[function(require,module,exports){
 "use strict";
 var SymbolShim_1 = require('../util/SymbolShim');
 /**
@@ -70051,7 +70894,7 @@ var SymbolShim_1 = require('../util/SymbolShim');
  */
 exports.rxSubscriber = SymbolShim_1.SymbolShim.for('rxSubscriber');
 
-},{"../util/SymbolShim":418}],417:[function(require,module,exports){
+},{"../util/SymbolShim":415}],414:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -70072,7 +70915,7 @@ var ObjectUnsubscribedError = (function (_super) {
 }(Error));
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 
-},{}],418:[function(require,module,exports){
+},{}],415:[function(require,module,exports){
 "use strict";
 var root_1 = require('./root');
 function polyfillSymbol(root) {
@@ -70142,30 +70985,30 @@ function ensureObservable(Symbol) {
 exports.ensureObservable = ensureObservable;
 exports.SymbolShim = polyfillSymbol(root_1.root);
 
-},{"./root":423}],419:[function(require,module,exports){
+},{"./root":420}],416:[function(require,module,exports){
 "use strict";
 // typeof any so that it we don't have to cast when comparing a result to the error object
 exports.errorObject = { e: {} };
 
-},{}],420:[function(require,module,exports){
+},{}],417:[function(require,module,exports){
 "use strict";
 exports.isArray = Array.isArray || (function (x) { return x && typeof x.length === 'number'; });
 
-},{}],421:[function(require,module,exports){
+},{}],418:[function(require,module,exports){
 "use strict";
 function isFunction(x) {
     return typeof x === 'function';
 }
 exports.isFunction = isFunction;
 
-},{}],422:[function(require,module,exports){
+},{}],419:[function(require,module,exports){
 "use strict";
 function isObject(x) {
     return x != null && typeof x === 'object';
 }
 exports.isObject = isObject;
 
-},{}],423:[function(require,module,exports){
+},{}],420:[function(require,module,exports){
 (function (global){
 "use strict";
 var objectTypes = {
@@ -70187,12 +71030,12 @@ if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === fre
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],424:[function(require,module,exports){
+},{}],421:[function(require,module,exports){
 "use strict";
 function throwError(e) { throw e; }
 exports.throwError = throwError;
 
-},{}],425:[function(require,module,exports){
+},{}],422:[function(require,module,exports){
 "use strict";
 var Subscriber_1 = require('../Subscriber');
 var rxSubscriber_1 = require('../symbol/rxSubscriber');
@@ -70209,7 +71052,7 @@ function toSubscriber(nextOrObserver, error, complete) {
 }
 exports.toSubscriber = toSubscriber;
 
-},{"../Subscriber":411,"../symbol/rxSubscriber":416}],426:[function(require,module,exports){
+},{"../Subscriber":408,"../symbol/rxSubscriber":413}],423:[function(require,module,exports){
 "use strict";
 var errorObject_1 = require('./errorObject');
 var tryCatchTarget;
@@ -70229,9 +71072,9 @@ function tryCatch(fn) {
 exports.tryCatch = tryCatch;
 ;
 
-},{"./errorObject":419}],427:[function(require,module,exports){
+},{"./errorObject":416}],424:[function(require,module,exports){
 
-},{}]},{},[1,427])
+},{}]},{},[1,424])
 
 
 //# sourceMappingURL=app.bundle.js.map
