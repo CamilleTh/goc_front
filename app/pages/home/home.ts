@@ -36,16 +36,16 @@ export class HomePage {
 
   getColor(code: number):string{
         if(code < 25){
-            return "TileRed";
+            return "redbg tile two-v   tile-width";
         }
         else if(code < 50){
-          return "TileOrange";
+          return "orangebg tile two-v   tile-width";
         }
         else if(code < 75){
-            return "TileVert";
+            return "bluebg tile two-v   tile-width";
         }
         else
-            return "TileJaune";
+            return "greenbg tile two-v   tile-width";
 
 
   }

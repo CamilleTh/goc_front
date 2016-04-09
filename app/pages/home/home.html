@@ -1,24 +1,49 @@
-<ion-navbar *navbar hideBackButton class="show-navbar">
-  <ion-title>{{Title}}</ion-title>
-</ion-navbar>
 
-<ion-content class="has-header grid-page">
+<ion-content>
 
-  <ion-row>
-    <ion-col [class]="meteo" width-50>
-      {{meteo}}
-    </ion-col>
-    <ion-col [class]="transport" width-50>
-      {{transport}}
-    </ion-col>
-  </ion-row>
+    <style>
 
-  <ion-row>
-    <ion-col [class]="securite" width-50>
-      {{securite}}
-    </ion-col>
-    <ion-col [class]="sante" width-50>
-      {{sante}}
-    </ion-col>
-  </ion-row>
+        .no-padding{
+            padding:0;
+
+
+        }
+
+        .tile-width {
+
+            width: 47%;
+
+        }
+
+        .tile-one {
+            width: 47%;
+
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $(".tile").each(addTileTilt);
+        };
+    </script>
+
+
+    <div class="tiles" style="width: 100%">
+        <div class="tilerow" style="width: 100%">
+            <div [class]="meteo" ><i class="fa fa-cloud" style="font-size: 3em;color:white;"></i>
+                <h2>Weather</h2></div>
+            <div [class]="transport"><i class="fa fa-road" style="font-size: 3em;color:white;"></i>
+                <h2>Transports</h2></div>
+
+            <div [class]="securite" ><i
+                    class="fa fa-shield" style="font-size: 3em;color:white;"></i>
+                <h2>Security</h2></div>
+            <div [class]="sante" ><i
+                    class="fa fa-heartbeat" style="font-size: 3em;color:white;"></i>
+                <h2>Health</h2></div>
+        </div>
+
+    </div>
+
+
 </ion-content>
