@@ -53,30 +53,31 @@ var HomePage = (function () {
         this._dataService = _dataService;
         this._geoService = _geoService;
     }
+    ;
     HomePage.prototype.onPageLoaded = function () {
         console.log("Enter");
         this.title = "Feel your City";
         /*this._geoService.getCoordonnate().map(res => {
-            this.position.lat = res.
-                this.position.lon = res
-            console.log(this.position);
-  
-        })*/
+         this.position.lat = res.
+         this.position.lon = res
+         console.log(this.position);
+
+         })*/
         console.log(this.position);
         this.getValues();
     };
     HomePage.prototype.getColor = function (code) {
         if (code < 25) {
-            return "greenbg";
+            return "redbg";
         }
         else if (code < 50) {
-            return "limebg";
-        }
-        else if (code < 75) {
             return "orangebg";
         }
+        else if (code < 75) {
+            return "limebg";
+        }
         else
-            return "redbg";
+            return "greenbg";
     };
     HomePage.prototype.getValues = function () {
         var _this = this;
@@ -104,7 +105,6 @@ var HomePage = (function () {
     HomePage = __decorate([
         ionic_angular_1.Page({
             templateUrl: 'build/pages/home/home.html',
-            styleUrls: ['/less/metro.less', '/css/font-awesome.min.css'],
             providers: [data_service_1.DataService, geo_service_1.GeoService]
         }), 
         __metadata('design:paramtypes', [data_service_1.DataService, geo_service_1.GeoService])
