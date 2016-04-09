@@ -1,41 +1,49 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
-@CamilleTh
-Watch 16
-Star 33
-Fork 47 driftyco/ionic-preview-app
-Code  Issues 3  Pull requests 1  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathionic-preview-app/app/pages/grid/basic/template.html
-b0414e8  on 8 Mar
-@brandyscarney brandyscarney refactor(routes): add RouteConfig with URLs
-1 contributor
-RawBlameHistory     67 lines (58 sloc)  1.2 KB
+<ion-content>
 
-<ion-navbar *navbar hideBackButton class="show-navbar">
-  <ion-title>Grid</ion-title>
-</ion-navbar>
+    <style>
 
-<ion-content class="has-header grid-page">
+        .no-padding{
+            padding:0;
+            
 
-  <ion-row >
-    <ion-col width-50>
-      Weather
-    </ion-col>
-    <ion-col width-50>
-      Transport
-    </ion-col>
-  </ion-row>
+        }
 
-  <ion-row>
-    <ion-col width-50>
-      Security
-    </ion-col>
-    <ion-col width-50>
-      Health
-    </ion-col>
-  </ion-row>
+        .tile-width {
+
+            width: 47%;
+
+        }
+
+        .tile-one {
+            width: 47%;
+
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $(".tile").each(addTileTilt);
+        };
+    </script>
+
+
+    <div class="tiles" style="width: 100%">
+        <div class="tilerow" style="width: 100%">
+            <div class="tile two-v orangebg  tile-width"><i class="fa fa-cloud" style="font-size: 3em;color:white;"></i>
+                <h2>Weather</h2></div>
+            <div class="tile two-v redbg tile-width no-padding"><i class="fa fa-road" style="font-size: 3em;color:white;"></i>
+                <h2>Transports</h2></div>
+
+            <div class="tile two-v greenbg tile-width" ><i
+                    class="fa fa-shield" style="font-size: 3em;color:white;"></i>
+                <h2>Security</h2></div>
+            <div class="tile two-v  bluebg tile-width" ><i
+                    class="fa fa-heartbeat" style="font-size: 3em;color:white;"></i>
+                <h2>Health</h2></div>
+        </div>
+
+
+    </div>
+
+
 </ion-content>
