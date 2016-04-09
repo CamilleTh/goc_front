@@ -1,0 +1,32 @@
+@import "../build/less/bootstrap.less";
+
+@import "../build/less/variables.less";
+@import "../build/less/colours.less";
+@import "../build/less/type.less";
+@import "../build/less/tiles.less";
+@import "../build/less/pivot.less";
+
+a {
+  color: @accent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @accentDark;
+  text-decoration: underline;
+}
+
+pre { 
+	padding: 15px;
+	border: 1px solid @inactive;
+	background: @faded;
+}
+
+code {
+	background: @faded;
+	border: 1px solid @inactive;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.clear { clear:both; }

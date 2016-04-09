@@ -4,7 +4,8 @@ import {GeoService} from "../../services/geo.service";
 import {Coordonnes} from "../../models/Coordonnes";
 
 @Page({
-  templateUrl: 'build/pages/home/home.html',
+    templateUrl: 'build/pages/home/home.html',
+    styleUrls: ['/less/metro.less','/css/font-awesome.min.css'],
   providers: [DataService,GeoService]
 })
 export class HomePage {
@@ -21,7 +22,7 @@ export class HomePage {
 
   onPageLoaded() {
       console.log("Enter");
-      this.title = "Fell your City";
+      this.title = "Feel your City";
       /*this._geoService.getCoordonnate().map(res => {
           this.position.lat = res.
               this.position.lon = res
@@ -36,16 +37,16 @@ export class HomePage {
 
   getColor(code: number):string{
         if(code < 25){
-            return "redbg tile two-v   tile-width";
+            return "greenbg";
         }
         else if(code < 50){
-          return "orangebg tile two-v   tile-width";
+          return "limebg";
         }
         else if(code < 75){
-            return "bluebg tile two-v   tile-width";
+            return "orangebg";
         }
         else
-            return "greenbg tile two-v   tile-width";
+            return "redbg";
 
 
   }
@@ -55,7 +56,7 @@ export class HomePage {
 
     this.transport = this._dataService.getTransportValue().subscribe(
         data => {
-          this.transport = this.getColor(data);
+          this.transport = this.getColor(data) + " tile two-v  tile-width no-padding";
           console.log(data)
         },
         err => console.error(err), //handle errors
@@ -64,7 +65,7 @@ export class HomePage {
 
     this.sante = this._dataService.getSanteValue().subscribe(
         data => {
-          this.sante = this.getColor(data);
+          this.sante = this.getColor(data) + " tile two-v tile-width no-padding";
           console.log(data)
         },
         err => console.error(err), //handle errors
@@ -74,7 +75,7 @@ export class HomePage {
 
     this.securite = this._dataService.getSecuriteValue().subscribe(
         data => {
-          this.securite = this.getColor(data);
+          this.securite = this.getColor(data) + " tile two-v tile-one tile-width";
           console.log(data)
         },
         err => console.error(err), //handle errors
@@ -83,7 +84,7 @@ export class HomePage {
 
     this.meteo = this._dataService.getMeteoValue().subscribe(
         data => {
-          this.meteo = this.getColor(data);
+          this.meteo = this.getColor(data) + " tile two-v tile-one tile-width";
           console.log(data)
         },
         err => console.error(err), //handle errors

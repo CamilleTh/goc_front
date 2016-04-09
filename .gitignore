@@ -2,4 +2,4 @@
 *.xml
 .idea/goc_front.iml
 node_modules/
-www/build/
+

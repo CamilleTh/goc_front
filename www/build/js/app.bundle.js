@@ -34,7 +34,6 @@ var MyApp = (function () {
     return MyApp;
 }());
 exports.MyApp = MyApp;
-
 },{"./pages/home/home":2,"es6-shim":258,"ionic-angular":339,"ionic-native":361}],2:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -56,7 +55,7 @@ var HomePage = (function () {
     }
     HomePage.prototype.onPageLoaded = function () {
         console.log("Enter");
-        this.title = "Fell your City";
+        this.title = "Feel your City";
         /*this._geoService.getCoordonnate().map(res => {
             this.position.lat = res.
                 this.position.lon = res
@@ -68,36 +67,36 @@ var HomePage = (function () {
     };
     HomePage.prototype.getColor = function (code) {
         if (code < 25) {
-            return "redbg tile two-v   tile-width";
+            return "greenbg";
         }
         else if (code < 50) {
-            return "orangebg tile two-v   tile-width";
+            return "limebg";
         }
         else if (code < 75) {
-            return "bluebg tile two-v   tile-width";
+            return "orangebg";
         }
         else
-            return "greenbg tile two-v   tile-width";
+            return "redbg";
     };
     HomePage.prototype.getValues = function () {
         var _this = this;
         this.transport = this._dataService.getTransportValue().subscribe(function (data) {
-            _this.transport = _this.getColor(data);
+            _this.transport = _this.getColor(data) + " tile two-v  tile-width no-padding";
             console.log(data);
         }, function (err) { return console.error(err); }, //handle errors
         function () { return console.log('getPosts completed'); });
         this.sante = this._dataService.getSanteValue().subscribe(function (data) {
-            _this.sante = _this.getColor(data);
+            _this.sante = _this.getColor(data) + " tile two-v tile-width no-padding";
             console.log(data);
         }, function (err) { return console.error(err); }, //handle errors
         function () { return console.log('getPosts completed'); });
         this.securite = this._dataService.getSecuriteValue().subscribe(function (data) {
-            _this.securite = _this.getColor(data);
+            _this.securite = _this.getColor(data) + " tile two-v tile-one tile-width";
             console.log(data);
         }, function (err) { return console.error(err); }, //handle errors
         function () { return console.log('getPosts completed'); });
         this.meteo = this._dataService.getMeteoValue().subscribe(function (data) {
-            _this.meteo = _this.getColor(data);
+            _this.meteo = _this.getColor(data) + " tile two-v tile-one tile-width";
             console.log(data);
         }, function (err) { return console.error(err); }, //handle errors
         function () { return console.log('getPosts completed'); });
@@ -105,6 +104,7 @@ var HomePage = (function () {
     HomePage = __decorate([
         ionic_angular_1.Page({
             templateUrl: 'build/pages/home/home.html',
+            styleUrls: ['/less/metro.less', '/css/font-awesome.min.css'],
             providers: [data_service_1.DataService, geo_service_1.GeoService]
         }), 
         __metadata('design:paramtypes', [data_service_1.DataService, geo_service_1.GeoService])
@@ -112,7 +112,6 @@ var HomePage = (function () {
     return HomePage;
 }());
 exports.HomePage = HomePage;
-
 },{"../../services/data.service":3,"../../services/geo.service":4,"ionic-angular":339}],3:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -170,7 +169,6 @@ var DataService = (function () {
     return DataService;
 }());
 exports.DataService = DataService;
-
 },{"angular2/core":7,"angular2/http":8,"rxjs/Observable":409,"rxjs/Rx":413}],4:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -214,7 +212,6 @@ var GeoService = (function () {
     return GeoService;
 }());
 exports.GeoService = GeoService;
-
 },{"angular2/core":7,"angular2/http":8,"ionic-native":361,"rxjs/Observable":409,"rxjs/Rx":413}],5:[function(require,module,exports){
 'use strict';function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];

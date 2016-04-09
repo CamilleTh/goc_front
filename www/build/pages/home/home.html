@@ -1,23 +1,46 @@
-
 <ion-content>
 
     <style>
 
-        .no-padding{
-            padding:0;
+        .h2-bottom-left {
 
+            bottom: 15px;
+            left: 20%;
+            position: absolute;
+            text-align: center;
+        }
+
+        .h2-bottom-right {
+
+            bottom: 30px;
+            right: 30px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .i-bottom-right {
+            bottom: 60px;
+            right: 30px;
+            position: absolute;
+            text-align: center;
+        }
+        
+
+
+        .no-padding {
+            padding: 0;
 
         }
 
         .tile-width {
-
+            position: relative;
             width: 47%;
+
 
         }
 
         .tile-one {
             width: 47%;
-
         }
     </style>
 
@@ -30,17 +53,15 @@
 
     <div class="tiles" style="width: 100%">
         <div class="tilerow" style="width: 100%">
-            <div [class]="meteo" ><i class="fa fa-cloud" style="font-size: 3em;color:white;"></i>
+            <div [class]="meteo"><i class="fa fa-cloud" style="font-size: 3em;color:white;"></i>
                 <h2>Weather</h2></div>
             <div [class]="transport"><i class="fa fa-road" style="font-size: 3em;color:white;"></i>
-                <h2>Transports</h2></div>
+                <h2 class="h2-bottom-left">Transports</h2></div>
 
-            <div [class]="securite" ><i
-                    class="fa fa-shield" style="font-size: 3em;color:white;"></i>
-                <h2>Security</h2></div>
-            <div [class]="sante" ><i
-                    class="fa fa-heartbeat" style="font-size: 3em;color:white;"></i>
-                <h2>Health</h2></div>
+            <div [class]="securite"><i class="fa fa-shield " style="font-size: 3em;color:white;"></i>
+                <h2 >Security</h2></div>
+            <div [class]="sante"><i class="fa fa-heartbeat i-bottom-right" style="font-size: 3em;color:white;"></i>
+                <h2 class="h2-bottom-right">Health</h2></div>
         </div>
 
     </div>
