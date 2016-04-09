@@ -4,20 +4,20 @@
 
 <ion-content class="has-header grid-page">
 
-  <ion-row >
-    <ion-col width-50>
+  <ion-row>
+    <ion-col [class]="meteo" width-50>
       {{meteo}}
     </ion-col>
-    <ion-col width-50>
+    <ion-col [class]="transport" width-50>
       {{transport}}
     </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col width-50>
+    <ion-col [class]="securite" width-50>
       {{securite}}
     </ion-col>
-    <ion-col width-50>
+    <ion-col [class]="sante" width-50>
       {{sante}}
     </ion-col>
   </ion-row>

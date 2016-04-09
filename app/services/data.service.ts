@@ -11,23 +11,33 @@ export class DataService {
     public transport:number = 0;
 
     public getTransportValue():Observable<number>{
-         return this._http.get('http://10.0.105.54:9000/api/transport?lat=11&lng=11')
-            .map(res => <number>res.json())
+        return Observable
+            .interval(2000)
+            .mergeMap(() => this._http.get('http://10.0.105.54:9000/api/transport?lat=11&lng=11')
+            .map(res => <number>res.json()));
+      //   return this._http.get('http://10.0.105.54:9000/api/transport?lat=11&lng=11')
+      //     .map(res => <number>res.json())
     }
 
     public getMeteoValue():Observable<number>{
-        return this._http.get('http://10.0.105.54:9000/api/weather?lat=11&lng=11')
-            .map(res => <number>res.json())
+        return Observable
+            .interval(2000)
+            .mergeMap(() => this._http.get('http://10.0.105.54:9000/api/weather?lat=11&lng=11')
+                .map(res => <number>res.json()));
     }
 
     public getSanteValue():Observable<number>{
-        return this._http.get('http://10.0.105.54:9000/api/health?lat=11&lng=11')
-            .map(res => <number>res.json())
+        return Observable
+            .interval(2000)
+            .mergeMap(() => this._http.get('http://10.0.105.54:9000/api/health?lat=11&lng=11')
+                .map(res => <number>res.json()));
     }
 
     public getSecuriteValue():Observable<number>{
-        return this._http.get('http://10.0.105.54:9000/api/security?lat=11&lng=11')
-            .map(res => <number>res.json())
+        return Observable
+            .interval(2000)
+            .mergeMap(() => this._http.get('http://10.0.105.54:9000/api/security?lat=11&lng=11')
+                .map(res => <number>res.json()));
     }
 
 }

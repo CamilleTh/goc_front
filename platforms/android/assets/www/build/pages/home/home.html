@@ -1,11 +1,24 @@
-<ion-navbar *navbar>
-  <ion-title>
-    Home
-  </ion-title>
+<ion-navbar *navbar hideBackButton class="show-navbar">
+  <ion-title>{{Title}}</ion-title>
 </ion-navbar>
 
-<ion-content class="home">
+<ion-content class="has-header grid-page">
+
   <ion-row>
-    <ion-col width-10>This column will take 10% of space</ion-col>
+    <ion-col [class]="meteo" width-50>
+      {{meteo}}
+    </ion-col>
+    <ion-col [class]="transport" width-50>
+      {{transport}}
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col [class]="securite" width-50>
+      {{securite}}
+    </ion-col>
+    <ion-col [class]="sante" width-50>
+      {{sante}}
+    </ion-col>
   </ion-row>
 </ion-content>
