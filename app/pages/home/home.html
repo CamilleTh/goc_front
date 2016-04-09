@@ -2,7 +2,7 @@
 
     <style>
 
-        .container_cstm{
+        .container_cstm {
             background-color: #4d4d4d;
         }
 
@@ -21,8 +21,6 @@
             position: absolute;
             text-align: center;
         }
-
-
 
         .h2-bottom-right {
 
@@ -44,7 +42,9 @@
             bottom: 60px;
             left: 30px;
             position: absolute;
-            text-align: center;font-size: 3em;color:white;
+            text-align: center;
+            font-size: 3em;
+            color: white;
         }
 
         .i-top-left {
@@ -52,7 +52,8 @@
             left: 30px;
             position: absolute;
             text-align: center;
-            font-size: 3em;color:white;
+            font-size: 3em;
+            color: white;
         }
 
         .i-bottom-right {
@@ -60,7 +61,8 @@
             right: 30px;
             position: absolute;
             text-align: center;
-            font-size: 3em;color:white;
+            font-size: 3em;
+            color: white;
         }
 
         .i-top-right {
@@ -68,10 +70,9 @@
             right: 30px;
             position: absolute;
             text-align: center;
-            font-size: 3em;color:white;
+            font-size: 3em;
+            color: white;
         }
-        
-
 
         .no-padding {
             padding: 0;
@@ -82,7 +83,22 @@
             position: relative;
             width: 47%;
 
+        }
 
+        .haut{
+            position: absolute;
+            top: 0;
+            height: 50%;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .bas{
+            position: absolute;
+            bottom: 0;
+            height: 50%;
+            width: 100%;
+            z-index: 1000;
         }
 
     </style>
@@ -99,21 +115,37 @@
 
 
             <div [class]="meteo">
+
+                <div class="haut" (click)="plusOne('WEATHER');"></div>
+            <div class="bas" (click)="minusOne('WEATHER');"></div>
+
                 <i class="fa fa-cloud i-top-left" style=""></i>
                 <h2 class="h2-top-left">Weather</h2>
             </div>
 
             <div [class]="transport">
+
+                <div class="haut" (click)="plusOne('TRANSPORT');"></div>
+                <div class="bas" (click)="minusOne('TRANSPORT');"></div>
+
                 <i class="fa fa-road i-top-right" style="font-size: 3em;color:white;"></i>
                 <h2 class="h2-top-right">Transports</h2>
             </div>
 
             <div [class]="securite">
+
+                <div class="haut" (click)="plusOne('SECURITY');"></div>
+            <div class="bas" (click)="minusOne('SECURITY');"></div>
+
                 <i class="fa fa-shield i-bottom-left" style="font-size: 3em;color:white;"></i>
                 <h2 class="h2-bottom-left">Security</h2>
             </div>
 
             <div [class]="sante">
+
+                <div class="haut" (click)="plusOne('HEALTH');"></div>
+                <div class="bas" (click)="minusOne('HEALTH');"></div>
+
                 <i class="fa fa-heartbeat i-bottom-right" style="font-size: 3em;color:white;"></i>
                 <h2 class="h2-bottom-right">Health</h2>
             </div>

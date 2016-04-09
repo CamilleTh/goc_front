@@ -48,12 +48,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ionic_angular_1 = require('ionic-angular');
 var data_service_1 = require("../../services/data.service");
 var geo_service_1 = require("../../services/geo.service");
+var http_1 = require("angular2/http");
 var HomePage = (function () {
-    function HomePage(_dataService, _geoService) {
+    function HomePage(_dataService, _geoService, _http) {
         this._dataService = _dataService;
         this._geoService = _geoService;
+        this._http = _http;
     }
-    ;
     HomePage.prototype.onPageLoaded = function () {
         console.log("Enter");
         this.title = "Feel your City";
@@ -78,6 +79,38 @@ var HomePage = (function () {
         }
         else
             return "greenbg";
+    };
+    HomePage.prototype.plusOne = function (type) {
+        console.log("PLUS : " + type);
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        return this._http.post('http://10.0.105.54:9000/api/' + type + '/up', JSON.stringify({ lat: 11, lng: 11 }), {
+            headers: headers
+        })
+            .map(function (response) { return response.json(); })
+            .subscribe(function (data) {
+            console.log('success');
+            console.log(data);
+        }, function (error) {
+            console.log('error');
+            console.log(error);
+        });
+    };
+    HomePage.prototype.minusOne = function (type) {
+        console.log("MINUS : " + type);
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        return this._http.post('http://10.0.105.54:9000/api/' + type + '/down', JSON.stringify({ lat: 11, lng: 11 }), {
+            headers: headers
+        })
+            .map(function (response) { return response.json(); })
+            .subscribe(function (data) {
+            console.log('success');
+            console.log(data);
+        }, function (error) {
+            console.log('error');
+            console.log(error);
+        });
     };
     HomePage.prototype.getValues = function () {
         var _this = this;
@@ -107,12 +140,12 @@ var HomePage = (function () {
             templateUrl: 'build/pages/home/home.html',
             providers: [data_service_1.DataService, geo_service_1.GeoService]
         }), 
-        __metadata('design:paramtypes', [data_service_1.DataService, geo_service_1.GeoService])
+        __metadata('design:paramtypes', [data_service_1.DataService, geo_service_1.GeoService, http_1.Http])
     ], HomePage);
     return HomePage;
 }());
 exports.HomePage = HomePage;
-},{"../../services/data.service":3,"../../services/geo.service":4,"ionic-angular":339}],3:[function(require,module,exports){
+},{"../../services/data.service":3,"../../services/geo.service":4,"angular2/http":8,"ionic-angular":339}],3:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

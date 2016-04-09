@@ -2,13 +2,17 @@ import {Page, NavController} from 'ionic-angular';
 import {DataService} from "../../services/data.service";
 import {GeoService} from "../../services/geo.service";
 import {Coordonnes} from "../../models/Coordonnes";
+import {Observable} from "rxjs/Observable";
+import {Http, Response, Headers} from "angular2/http";
+
+
 
 @Page({
     templateUrl: 'build/pages/home/home.html',
     providers: [DataService, GeoService]
 })
 export class HomePage {
-    constructor(private _dataService:DataService, private _geoService:GeoService) {
+    constructor(private _dataService:DataService, private _geoService:GeoService, private _http:Http) {
     }
 
     title:string;
@@ -16,7 +20,6 @@ export class HomePage {
     securite;
     meteo
     sante;
-;
     position:Coordonnes;
 
 
@@ -47,6 +50,41 @@ export class HomePage {
         }
         else
             return "greenbg";
+    }
+
+    plusOne(type) {
+        console.log("PLUS : "+type);
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this._http.post('http://10.0.105.54:9000/api/' + type + '/up',JSON.stringify({lat:11,lng:11}), {
+                headers: headers
+            })
+            .map((response:Response) => <any[]>response.json())
+            .subscribe(data => {
+                console.log('success');
+                console.log(data);
+            }, error => {
+                console.log('error');
+                console.log(error);
+            });
+      }
+
+
+    minusOne(type) {
+        console.log("MINUS : "+type);
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this._http.post('http://10.0.105.54:9000/api/' + type + '/down',JSON.stringify({lat:11,lng:11}), {
+                headers: headers
+            })
+            .map((response:Response) => <any[]>response.json())
+            .subscribe(data => {
+                console.log('success');
+                console.log(data);
+            }, error => {
+                console.log('error');
+                console.log(error);
+            });
     }
 
     getValues() {
